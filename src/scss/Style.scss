@@ -16,6 +16,7 @@ header{
     display: flex;
     justify-content: center;
     height: 100px;
+    z-index: 5;
 
     .header__wrapper{
         width: 100%;
@@ -48,20 +49,40 @@ header{
             }
         }
         .header__menu{
+            position: fixed;
+            top: 0;
+            right: 15vw;
             margin-top: 25px;
             display: flex;
-        
+            cursor: pointer;
             background: rgb(219, 112, 70);
             height: 40px;
             width: 100%;
             max-width: 100px;
             align-items: center;
             justify-content: space-around;
+            z-index: 4;
             p{
                 font-size: 15px;
                 color: white;
             }
+
+          
+
         }
+            
+        .header__menu:hover{
+            .header__burger{
+                margin-top: 8px;
+                padding-top: 7px;
+            }
+            .header__burger::before{
+                left: 5px;
+                margin-bottom: 7px;
+            }
+        }
+    
+
         .header__burger{
             position: relative;
             bottom: 10px;
@@ -72,26 +93,87 @@ header{
             width: 20px;
             border-top: 2px solid white;
             padding-top: 5px;
+            z-index: 4;
         }
         .header__burger::before{
             position: relative;
             left: 3px;
+            right: 0;
             display: block;
             content: "";
             border-bottom: 2px solid white;
             height: 1px;
             width: 20px;
             margin-bottom: 5px;
+            transition: all 0.3s;
         }
         .header__burger::after{
+            position: relative;
             display: block;
             content: "";
             border-top: 2px solid white;
-        
+            transition: all 0.3s;
             
         }
+
+
+        .header__menu-panel{
+            position: fixed;
+            width: 32vw;
+            height: 50vh;
+            right: 0;
+            bottom: 150vh;
+            z-index: 3;
+            transition: all 0.4s;
+            background: grey;
+            li{
+                color: white;
+                font-size: 50px;
+                line-height: 10px;
+                text-align: center;
+                margin-right: 20px;
+                margin-top: 100px;
+                cursor: pointer;
+            }
+            li:hover{
+                position: relative;
+                bottom: 5px;
+                right: 2px;
+                transition: all 0.5s;
+            }
+        }
     }
- 
+    .menu__open{
+        bottom: 50vh !important;
+    
+    }
+    .burger__open{
+        position: fixed;
+        border: none !important;
+
+    }
+    .burger__open::before{
+       left: -4px !important;
+       width: 30px !important;
+       border: 1px solid white;
+       background: white !important;
+       transform: rotate(45deg);
+       margin: 0 !important;
+       padding: 0 !important;
+       transition: all 0.3s;
+    }
+    .burger__open::after{
+        bottom: 3px ;
+        right: 3px;
+        width: 30px !important;
+        border: 1px solid white;
+        background: white !important;
+        transform: rotate(-45deg);
+        padding: 0 !important;
+        margin: 0 !important;
+        transition: all 0.3s;
+     }
+
 }
 .carousel{
     position: fixed;
@@ -101,7 +183,7 @@ header{
     width: 80vw;
     height: 90vh;
     background: #000;
-    // z-index: 1;
+    z-index: 1;
 }
 
 .content{
@@ -123,15 +205,6 @@ header{
     // margin-top: 100vh;
 }
 
-.carousel__wrapper{
-    // display: block;
-    // position: relative;
-    // width: 100%;
-    // min-height: 100vh;
-    // z-index: 4;
-}
-
-
 .carousel__slider {
     position: fixed;
     bottom: 0px;
@@ -147,7 +220,7 @@ header{
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 9;
+    z-index: 2;
     font-size: 20px;
     color: rgb(8, 4, 4);
     transition: all 1s ease ;
