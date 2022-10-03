@@ -4,7 +4,7 @@
 
 
 body{
-    background: rgb(120, 49, 202);
+    background: #875f91;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,10 +30,10 @@ header{
             display: flex;
             flex-direction: column;
             font-size: 24px;
-            font-family: KyivTypeSans;
             color: white;
             max-width: 350px;
             margin-left: 40px;
+         
            
             
             #logoImg{
@@ -44,11 +44,15 @@ header{
             h1{ 
                 position: relative;
                 bottom: 20px;
+                font-family: KyivTypeSans;
+       
             }
             p{
                 position: relative;
                 bottom: 20px;
                 max-width: 100%;
+                font-family: KyivTypeSans;
+          
             }
         }
         .header__menu{
@@ -58,7 +62,7 @@ header{
             margin-top: 25px;
             display: flex;
             cursor: pointer;
-            background: rgb(219, 112, 70);
+            background: #d187aa;
             height: 40px;
             width: 100%;
             max-width: 100px;
@@ -131,20 +135,21 @@ header{
 
         .header__menu-panel{
             position: fixed;
-            width: 32vw;
+            width: 31.6vw;
             height: 50vh;
             right: 0;
             bottom: 150vh;
             z-index: 3;
             transition: all 0.4s;
-            background: grey;
+            background: rgba(129, 128, 128, 0.5);
             li{
-                color: white;
-                font-size: 50px;
+                color: black;
+                text-shadow: 0 0 10px white;
+                font-size: 40px;
                 line-height: 10px;
                 text-align: center;
                 margin-right: 20px;
-                margin-top: 100px;
+                margin-top: 90px;
                 cursor: pointer;
             }
             li:hover{
@@ -195,7 +200,7 @@ header{
     display: flex;
     width: 60vw;
     height: 3000px;
-    background: red;
+    background: #d187aa;
     z-index: 5;
     margin-top: 1px;
 
@@ -216,7 +221,7 @@ header{
     right: 60px;
     clip-path: polygon(90% 0, 100% 89%, 79% 97%, 80% 100%, 30% 100%, 0 100%, 1% 89%, 0 50%, 1% 24%, 0 0);
     width: 85vw;
-    height: 85vh;
+    height: 86vh;
     background: #000;
     z-index: 2;
     transition: all 0.1;
@@ -265,43 +270,54 @@ header{
     display: flex;
     position: fixed;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    padding-top: 52vh;
+    padding-top: 45vh;
     top: 0;
     width: 32vw;
     height: 100vh;
-    background: rgb(90, 85, 85);
+    background: url("../img/popupBg.jpg");
     font-size: 20px;
     z-index: -1;
     opacity: 0;
     transition: all 0.8s;
     left: 100%;
+
     h2{
-        margin-bottom: 50px;
+        margin-bottom: 40px;
         font-size: 40px;
+        color: black;
+        text-shadow: 0 0 6px white;
+        width: 60%;
+        padding: 0;
+        margin-left: 2.5%;
     }
     form{
         width: 100%;
         display: flex;
         flex-direction: column;
         padding: 0 20px;
+       
         label{
             display: flex;
             justify-content: space-between;
             margin: 10px 0;
+            color: rgb(0, 0, 0);
+            text-shadow: 0 0 20px white;
             input{
               width: 300px;
               height: 30px;
               font-size: 20px;
               border: 1px solid black ; 
               box-shadow: 2px 3px 10px rgb(15, 14, 14);  
+                background: rgba(255, 255, 255, 0.95);
+                
+             
         }
             
         }
         label:last-child{
             input{
-                height: 200px;
+                height: 350%;
             }
         }
    
@@ -324,4 +340,41 @@ header{
   width: 100%;
 
 
+}
+.aboutUs__container{
+    h2{
+        position: relative;
+        top: 10vh;
+        left: 13vw;
+        font-size: 50px;
+    }
+}
+.aboutUs__content{
+    position: relative;
+    width: 60vw;
+    height: 60vh;
+
+    #imgRightAbout{
+        position: absolute;
+        right: 2vw;
+        top: 2vh;
+        max-width: 500px ;
+        max-height: 500px ;
+    }
+    #imgLeftAbout{
+        position: absolute;
+        left: 10vh;
+        top: 20vh;
+        max-width: 500px ;
+        max-height: 500px ;
+    }
+    p{
+        position: absolute;
+        font-size: 30px;
+        width: 50%;
+        right: 0vw;
+        bottom: 5vh;
+        line-height: 40px;
+    }
+   
 }

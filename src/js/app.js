@@ -115,12 +115,12 @@ window.addEventListener("scroll", () =>{
    let height = sliderWindow.clientHeight + (sliderWindowCord - contentCord);
 
 
-    if(contentPosition - sliderWindowCord <= 1){
+    if(contentPosition - sliderWindowCord <= 0){
        sliderWindow.style.height = height + "px";
        sliderWindow.style.height = sliderWindow.style.height = sliderWindow.clientHeight + (sliderWindowCord + contentCord);
     }
     if( sliderWindowCord - contentPosition <= sliderWindowHeight){
-      sliderWindow.style.height = 88 + "vh";
+      sliderWindow.style.height = 86 + "vh";
     }
 
 })
