@@ -251,6 +251,7 @@ header .burger__open::after {
   height: 3000px;
   background: red;
   z-index: 5;
+  margin-top: 1px;
 }
 
 .spacer {
@@ -262,13 +263,14 @@ header .burger__open::after {
 
 .carousel__slider {
   position: fixed;
-  bottom: 0px;
+  bottom: -1px;
   right: 60px;
   clip-path: polygon(90% 0, 100% 89%, 79% 97%, 80% 100%, 30% 100%, 0 100%, 1% 89%, 0 50%, 1% 24%, 0 0);
   width: 85vw;
-  height: 88vh;
+  height: 85vh;
   background: #000;
   z-index: 2;
+  transition: all 0.1;
 }
 
 .slider__item {
@@ -318,7 +320,6 @@ header .burger__open::after {
   justify-content: center;
   padding-top: 52vh;
   top: 0;
-  right: 0;
   width: 32vw;
   height: 100vh;
   background: rgb(90, 85, 85);
@@ -326,7 +327,7 @@ header .burger__open::after {
   z-index: -1;
   opacity: 0;
   transition: all 0.8s;
-  left: 200vh;
+  left: 100%;
 }
 .modal h2 {
   margin-bottom: 50px;
@@ -357,5 +358,9 @@ header .burger__open::after {
 .modal__active {
   opacity: 1;
   z-index: 4 !important;
-  left: 135vh;
+  left: 68%;
+}
+
+.sliderHeight {
+  width: 100%;
 }

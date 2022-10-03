@@ -1,5 +1,10 @@
 import * as flsFunctions from "./modules/functions.js";
  flsFunctions.isWebp();
+
+
+
+
+
 /////////slider
  const itemSlides = document.querySelectorAll(".slider__item");
  let currentSlide = 0;
@@ -54,17 +59,17 @@ const screenHeight = window.screen.availHeight
 console.log(screenHeight)
 
 function showModalByScroll (){
-    if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight / 100 * 48 - 10){
+    if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight / 100 * 49 - 10){
         modal.classList.add("display__mode")    
     }
-    if (window.pageYOffset + document.documentElement.clientHeight <= document.documentElement.scrollHeight / 100 * 48 - 10){
+    if (window.pageYOffset + document.documentElement.clientHeight <= document.documentElement.scrollHeight / 100 * 49 - 10){
         modal.classList.remove("display__mode")    
     }
-    if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight / 100 * 48){
+    if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight / 100 * 49){
         modal.classList.add("modal__active")  
         
     }
-    if(window.pageYOffset + document.documentElement.clientHeight <= document.documentElement.scrollHeight / 100 * 48){
+    if(window.pageYOffset + document.documentElement.clientHeight <= document.documentElement.scrollHeight / 100 * 49){
         modal.classList.remove("modal__active")  
     }
     
@@ -73,6 +78,53 @@ window.addEventListener("scroll", showModalByScroll );
 
 
 ////////modal
+
+
+
+
+
+
+const content = document.querySelector(".content");
+const sliderWindow = document.querySelector(".carousel__slider");
+const sliderWindowHeight = sliderWindow.getBoundingClientRect().height;
+
+console.log(sliderWindowHeight);
+
+// console.log(sliderWindowPosition);
+// console.log(contentPosition)
+
+
+window.addEventListener("scroll", () =>{
+
+   let scrollTop = window.pageYOffset;
+
+
+   let contentPosition = content.getBoundingClientRect().y;
+   let contentCord = content.getBoundingClientRect().y +  window.pageYOffset;
+
+   let sliderWindowPosition = sliderWindow.getBoundingClientRect().y
+   const sliderWindowCord = sliderWindow.getBoundingClientRect().y +  window.pageYOffset;
+
+    // console.log(contentPosition)
+    // console.log(contentCord)
+    // console.log(sliderWindowCord)
+    // console.log(sliderWindowCord - contentPosition )
+
+
+//    console.log( sliderWindow.clientHeight + (sliderWindowCord - contentCord) + "px");
+   let height = sliderWindow.clientHeight + (sliderWindowCord - contentCord);
+
+
+    if(contentPosition - sliderWindowCord <= 1){
+       sliderWindow.style.height = height + "px";
+       sliderWindow.style.height = sliderWindow.style.height = sliderWindow.clientHeight + (sliderWindowCord + contentCord);
+    }
+    if( sliderWindowCord - contentPosition <= sliderWindowHeight){
+      sliderWindow.style.height = 88 + "vh";
+    }
+
+})
+
 
 
 
