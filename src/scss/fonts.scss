@@ -1,7 +1,35 @@
 @font-face{
-	font-family: KyivTypeSans;
+	font-family: BarlowBlack;
 	font-display: swap;
-	src: url("../fonts/KyivTypeSans-VarGX.woff2") format("woff2"), url("../fonts/KyivTypeSans-VarGX.woff") format("woff");
+	src: url("../fonts/Barlow-Black.woff2") format("woff2"), url("../fonts/Barlow-Black.woff") format("woff");
+	font-weight: 900;
+	font-style: normal;
+}
+@font-face{
+	font-family: BarlowBold;
+	font-display: swap;
+	src: url("../fonts/Barlow-Bold.woff2") format("woff2"), url("../fonts/Barlow-Bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face{
+	font-family: BarlowMedium;
+	font-display: swap;
+	src: url("../fonts/Barlow-Medium.woff2") format("woff2"), url("../fonts/Barlow-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face{
+	font-family: BarlowRegular;
+	font-display: swap;
+	src: url("../fonts/Barlow-Regular.woff2") format("woff2"), url("../fonts/Barlow-Regular.woff") format("woff");
 	font-weight: 400;
+	font-style: normal;
+}
+@font-face{
+	font-family: BarlowLight;
+	font-display: swap;
+	src: url("../fonts/Barlow-Light.woff2") format("woff2"), url("../fonts/Barlow-Light.woff") format("woff");
+	font-weight: 300;
 	font-style: normal;
 }

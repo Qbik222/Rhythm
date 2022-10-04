@@ -15,7 +15,7 @@
   }
   
   html, body {
-    font-family: KyivTypeSans;
+    
     height: 100%;
     width: 100%;
     font-size: 100%;
@@ -49,10 +49,12 @@
   a, a:visited {
     text-decoration: none;
     color: #FFFFFF;
+  
   }
   
   ul, li {
     list-style: none;
+
   }
   
   img {
@@ -62,4 +64,5 @@
   h1, h2, h3, h4, h5, h6 {
     font-size: inherit;
     font-weight: 400;
+ 
   }

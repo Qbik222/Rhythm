@@ -5,6 +5,29 @@ import * as flsFunctions from "./modules/functions.js";
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /////////slider
  const itemSlides = document.querySelectorAll(".slider__item");
  let currentSlide = 0;
@@ -59,17 +82,17 @@ const screenHeight = window.screen.availHeight
 console.log(screenHeight)
 
 function showModalByScroll (){
-    if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight / 100 * 49 - 10){
+    if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight / 100 * 47 - 10){
         modal.classList.add("display__mode")    
     }
-    if (window.pageYOffset + document.documentElement.clientHeight <= document.documentElement.scrollHeight / 100 * 49 - 10){
+    if (window.pageYOffset + document.documentElement.clientHeight <= document.documentElement.scrollHeight / 100 * 47 - 10){
         modal.classList.remove("display__mode")    
     }
-    if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight / 100 * 49){
+    if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight / 100 * 47){
         modal.classList.add("modal__active")  
         
     }
-    if(window.pageYOffset + document.documentElement.clientHeight <= document.documentElement.scrollHeight / 100 * 49){
+    if(window.pageYOffset + document.documentElement.clientHeight <= document.documentElement.scrollHeight / 100 * 47){
         modal.classList.remove("modal__active")  
     }
     
@@ -78,7 +101,6 @@ window.addEventListener("scroll", showModalByScroll );
 
 
 ////////modal
-
 
 
 
@@ -106,6 +128,7 @@ window.addEventListener("scroll", () =>{
    const sliderWindowCord = sliderWindow.getBoundingClientRect().y +  window.pageYOffset;
 
     // console.log(contentPosition)
+    // console.log(logoPosition)
     // console.log(contentCord)
     // console.log(sliderWindowCord)
     // console.log(sliderWindowCord - contentPosition )
@@ -115,18 +138,37 @@ window.addEventListener("scroll", () =>{
    let height = sliderWindow.clientHeight + (sliderWindowCord - contentCord);
 
 
-    if(contentPosition - sliderWindowCord <= 0){
+    if(contentPosition - sliderWindowCord < 0){
        sliderWindow.style.height = height + "px";
        sliderWindow.style.height = sliderWindow.style.height = sliderWindow.clientHeight + (sliderWindowCord + contentCord);
     }
-    if( sliderWindowCord - contentPosition <= sliderWindowHeight){
+    if( sliderWindowCord - contentPosition < sliderWindowHeight){
       sliderWindow.style.height = 86 + "vh";
     }
 
 })
 
 
+////////////////hide logo
 
+const logo = document.querySelector(".logo")
+
+function hideLogoByScroll(){
+    console.log( window.pageYOffset + document.documentElement.clientHeight)
+    console.log(document.documentElement.scrollHeight);
+    if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight / 100 *10){
+        logo.classList.add("logoHide")  
+        
+    }  if (window.pageYOffset + document.documentElement.clientHeight <= document.documentElement.scrollHeight / 100 * 44){
+        logo.classList.remove("logoHide")  
+        
+    }
+}
+
+window.addEventListener("scroll", hideLogoByScroll)
+
+
+///////////////////////////////
 
 
 
