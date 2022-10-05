@@ -70,7 +70,7 @@
         </symbol>
     
      </svg>
-   @@include("html/header.html" {}) -->
+   @@include("html/header.html" {})
 
   
    <main class="wrapper"> 
@@ -106,35 +106,56 @@
     </div>
     <div class="content">
         <div class="aboutUs__container">
-            <h2>About us</h2>
+            <h2 class="aboutUs__headerText">About us</h2>
             <div class="aboutUs__content">
                 <img src="./img/AboutRightImg.jpg" alt="ads" id="imgRightAbout">
                 <img src="./img/AboutLeftImg.jpg" alt="ads" id="imgLeftAbout">
-                <p>
+                <p class="aboutUs__text">
                     Rhythm is a modern and classical dance school for children. 
                     The program of the school is built on the principle of a dance academy.
-                    <a href="#"> Read more..</a>
+                    
                 </p>
+                <a href="#" class="readMore__btn"> Read more..</a>
             </div>
         </div>
-        <div class="location__container">
-           
+        <div class="map__container">
+            <h2 class="location__headerText">Location</h2>
+            <p class="location__street">Yevgena Sverstyuk 4A street</p>
+            <div id="map"></div>
         </div>
     </div>
+ 
+    
     <div class="modal">
-        <h2>Sign Up for a trial training session</h2>
-        <form action="submit">
-            <label>Your name<input type="text"></label>
-            <label>Child name<input type="text"></label>
-            <label>Your phone number<input type="number" placeholder="+380"></label>
-            <label>A little about you<input type="text"></label>            
+        <h2 class="form__header">Sign Up for a trial training session</h2>
+        <form action="submit" >
+            <div class="form__item">
+                <label class="form__name">Your name</label>
+                <input type="text">
+            </div>
+            <div class="form__item">
+                <label class="form__childName">Child name</label>
+                <input type="text">
+            </div>
+            <div class="form__item">
+                <label class="form__number">Your phone number</label>
+                <input type="number" placeholder="+380">
+            </div>
+            <div class="form__item">
+                <label class="form__about">A little about you</label>   
+                <input type="text">
+            </div>
+            
+           
+            
+                   
         </form>
     </div>
    
    </main>
 
    @@include("html/footer.html"{})
-
+   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyBEa_VjuoD1wSLzIjovoK3RQr5522bog"></script>
   <script src="js/app.min.js"></script>
   
 </body>

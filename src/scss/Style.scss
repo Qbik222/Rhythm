@@ -80,6 +80,8 @@ header{
             p{
                 font-size: 15px;
                 color: white;
+                text-transform: uppercase;
+                font-family: $textFont;
             }
 
           
@@ -130,14 +132,15 @@ header{
             transition: all 0.3s;
             
         }
-        #close{
+        .close{
             display: none;
         }
-        #open{
+        .open{
             display: none;
         }
         .btn__active{
            display: block !important; 
+           font-size: 20px;
         }
 
 
@@ -222,7 +225,7 @@ header{
                 text-align: center;
                 margin-right: 20px;
                 gap: 20px;
-                width: 10vw;
+                width: 100%;
                 height: 6vh;
                 transition: all 0.3s;
                 cursor: pointer;
@@ -248,7 +251,7 @@ header{
 
     }
     .burger__open::before{
-       left: -4px !important;
+       left: -7px !important;
        width: 30px !important;
        border: 1px solid white;
        background: white !important;
@@ -259,7 +262,7 @@ header{
     }
     .burger__open::after{
         bottom: 3px ;
-        right: 3px;
+        right: 6px;
         width: 30px !important;
         border: 1px solid white;
         background: white !important;
@@ -276,6 +279,8 @@ header{
     position: relative;
     right: 20%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 60vw;
     height: 3000px;
     background: #d187aa;
@@ -375,28 +380,35 @@ header{
         flex-direction: column;
         padding: 0 20px;
         margin-left: 2%;
-       
-        label{
+        gap: 1vh;
+
+        .form__item{
             display: flex;
             justify-content: space-between;
-            margin: 10px 0;
-            color: rgb(0, 0, 0);
-            text-shadow: 0 0 20px white;
-            input{
-              width: 300px;
-              height: 30px;
-              font-size: 20px;
-              border: 1px solid black ; 
-              box-shadow: 2px 3px 10px rgb(15, 14, 14);  
-                background: rgba(255, 255, 255, 0.95);
+            width: 100%;
+
+                label{
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 10px 0;
+                    color: rgb(0, 0, 0);
+                    text-shadow: 0 0 20px white;
                 
-             
-        }
-            
-        }
-        label:last-child{
+                }
+                input{
+                    width: 300px;
+                    height: 30px;
+                    font-size: 20px;
+                    border: 1px solid black ; 
+                    box-shadow: 2px 3px 10px rgb(15, 14, 14);  
+                    background: rgba(255, 255, 255, 0.95);
+                    
+                
+                }
+            }
+        .form__item:last-child{
             input{
-                height: 350%;
+                height: 300%;
             }
         }
    
@@ -431,7 +443,7 @@ header{
 .aboutUs__content{
     position: relative;
     width: 60vw;
-    height: 60vh;
+    height: 65vh;
 
     #imgRightAbout{
         position: absolute;
@@ -443,20 +455,64 @@ header{
     #imgLeftAbout{
         position: absolute;
         left: 10vh;
-        top: 17vh;
+        top: 13vh;
         max-width: 500px ;
         max-height: 500px ;
     }
     p{
         position: absolute;
         font-size: 30px;
-        width: 50%;
-        right: 0vw;
-        bottom: 0vh;
+        width: 45%;
+        right: 5vw;
+        bottom: 5vh;
         line-height: 40px;
+    }
+    a{
+        position: absolute;
+        right: 12.5vw;
+        bottom: 5.5vh;
+        font-size: 30px;
+
     }
    
 }
+
+
+
+.map__container{
+    position: relative;
+
+    width: 100%;
+    height: 65vh;
+    z-index: 5;
+    // background: #000;
+    margin-top: 10vh;
+    .location__headerText{
+        position: absolute;
+        right: 3vw;
+        top: 3vh;
+        font-size: 40px;
+    }
+    .location__street{
+        position: relative;
+        top:12vh;
+        left: 4vw;
+        font-size: 25px;
+    }
+
+}
+
+#map{
+    position: relative;
+    top: 20%;
+    left: 5%;
+    width: 90%;
+    height: 85%;
+    z-index: 10;
+}
+
+
+
 .logo{
     position: relative;
     bottom: 0;
@@ -560,3 +616,15 @@ footer{
     }
 }
 
+.language{
+    position: fixed;
+    right: 22vw;
+    top: 2.65vh;
+    height: 40px;
+    width: 50px;
+    background: #d187aa;
+    font-size: 17px;
+    color: white;
+    font-family: $textFont;
+    z-index: 5;
+}

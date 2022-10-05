@@ -169,6 +169,8 @@ header .header__wrapper .header__menu {
 header .header__wrapper .header__menu p {
   font-size: 15px;
   color: white;
+  text-transform: uppercase;
+  font-family: BarlowRegular;
 }
 header .header__wrapper .header__menu:hover .header__burger {
   margin-top: 8px;
@@ -208,14 +210,15 @@ header .header__wrapper .header__burger::after {
   border-top: 2px solid white;
   transition: all 0.3s;
 }
-header .header__wrapper #close {
+header .header__wrapper .close {
   display: none;
 }
-header .header__wrapper #open {
+header .header__wrapper .open {
   display: none;
 }
 header .header__wrapper .btn__active {
   display: block !important;
+  font-size: 20px;
 }
 header .header__wrapper .header__menu-panel {
   position: fixed;
@@ -291,7 +294,7 @@ header .header__wrapper .header__menu-panel li {
   text-align: center;
   margin-right: 20px;
   gap: 20px;
-  width: 10vw;
+  width: 100%;
   height: 6vh;
   transition: all 0.3s;
   cursor: pointer;
@@ -311,7 +314,7 @@ header .burger__open {
   border: none !important;
 }
 header .burger__open::before {
-  left: -4px !important;
+  left: -7px !important;
   width: 30px !important;
   border: 1px solid white;
   background: white !important;
@@ -322,7 +325,7 @@ header .burger__open::before {
 }
 header .burger__open::after {
   bottom: 3px;
-  right: 3px;
+  right: 6px;
   width: 30px !important;
   border: 1px solid white;
   background: white !important;
@@ -336,6 +339,8 @@ header .burger__open::after {
   position: relative;
   right: 20%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 60vw;
   height: 3000px;
   background: #d187aa;
@@ -433,15 +438,21 @@ header .burger__open::after {
   flex-direction: column;
   padding: 0 20px;
   margin-left: 2%;
+  gap: 1vh;
 }
-.modal form label {
+.modal form .form__item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.modal form .form__item label {
   display: flex;
   justify-content: space-between;
   margin: 10px 0;
   color: rgb(0, 0, 0);
   text-shadow: 0 0 20px white;
 }
-.modal form label input {
+.modal form .form__item input {
   width: 300px;
   height: 30px;
   font-size: 20px;
@@ -449,8 +460,8 @@ header .burger__open::after {
   box-shadow: 2px 3px 10px rgb(15, 14, 14);
   background: rgba(255, 255, 255, 0.95);
 }
-.modal form label:last-child input {
-  height: 350%;
+.modal form .form__item:last-child input {
+  height: 300%;
 }
 
 .modal__active {
@@ -473,7 +484,7 @@ header .burger__open::after {
 .aboutUs__content {
   position: relative;
   width: 60vw;
-  height: 60vh;
+  height: 65vh;
 }
 .aboutUs__content #imgRightAbout {
   position: absolute;
@@ -485,17 +496,52 @@ header .burger__open::after {
 .aboutUs__content #imgLeftAbout {
   position: absolute;
   left: 10vh;
-  top: 17vh;
+  top: 13vh;
   max-width: 500px;
   max-height: 500px;
 }
 .aboutUs__content p {
   position: absolute;
   font-size: 30px;
-  width: 50%;
-  right: 0vw;
-  bottom: 0vh;
+  width: 45%;
+  right: 5vw;
+  bottom: 5vh;
   line-height: 40px;
+}
+.aboutUs__content a {
+  position: absolute;
+  right: 12.5vw;
+  bottom: 5.5vh;
+  font-size: 30px;
+}
+
+.map__container {
+  position: relative;
+  width: 100%;
+  height: 65vh;
+  z-index: 5;
+  margin-top: 10vh;
+}
+.map__container .location__headerText {
+  position: absolute;
+  right: 3vw;
+  top: 3vh;
+  font-size: 40px;
+}
+.map__container .location__street {
+  position: relative;
+  top: 12vh;
+  left: 4vw;
+  font-size: 25px;
+}
+
+#map {
+  position: relative;
+  top: 20%;
+  left: 5%;
+  width: 90%;
+  height: 85%;
+  z-index: 10;
 }
 
 .logo {
@@ -590,4 +636,17 @@ footer .social__Media .socialMedia-Tiktok:hover {
   bottom: 5px;
   right: 1px;
   fill: purple;
+}
+
+.language {
+  position: fixed;
+  right: 22vw;
+  top: 2.65vh;
+  height: 40px;
+  width: 50px;
+  background: #d187aa;
+  font-size: 17px;
+  color: white;
+  font-family: BarlowRegular;
+  z-index: 5;
 }

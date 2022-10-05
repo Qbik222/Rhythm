@@ -1,7 +1,9 @@
+import langArr from "./lang.js"
+import changeLanguage from "./modules/changeLng.js";
+import mapApi from "./modules/mapsApi.js";
+
 import * as flsFunctions from "./modules/functions.js";
  flsFunctions.isWebp();
-
-
 
 
 
@@ -65,10 +67,11 @@ const burger = document.querySelector(".header__burger");
 
 menuBtn.forEach(item =>{
     item.addEventListener("click", () =>{
+        console.log("click")
         menu.classList.toggle("menu__open");
         burger.classList.toggle("burger__open");
-        document.querySelector("#open").classList.toggle("btn__active");
-        document.querySelector("#close").classList.toggle("btn__active");
+        document.querySelector(".open").classList.toggle("btn__active");
+        document.querySelector(".close").classList.toggle("btn__active");
 
     });
 })
@@ -170,11 +173,12 @@ window.addEventListener("scroll", hideLogoByScroll)
 
 ///////////////////////////////
 
+console.log(document.querySelector(".location__street").outerText)
 
 
 
+mapApi();
 
-
-
+changeLanguage(langArr);
 
 
