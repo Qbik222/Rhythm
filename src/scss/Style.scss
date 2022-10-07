@@ -364,16 +364,12 @@ header{
     opacity: 0;
     transition: all 0.8s;
     left: 100%;
+    // bottom: 10%;
 
-    h2{
-        margin-bottom: 40px;
-        font-size: 40px;
-        color: black;
-        text-shadow: 0 0 6px white;
-        width: 60%;
-        padding: 0;
-        margin-left: 4.5%;
-    }
+
+ 
+    
+
     form{
         width: 100%;
         display: flex;
@@ -382,11 +378,30 @@ header{
         margin-left: 2%;
         gap: 1vh;
 
+        .form__title{
+            margin-bottom: 10px;
+            font-size: 40px;
+            color: black;
+            text-shadow: 0 0 6px white;
+            width: 60%;
+            padding: 0;
+            margin-left: 4.5%;
+        }
         .form__item{
             display: flex;
             justify-content: space-between;
             width: 100%;
+              
 
+                .about{
+                    width: 300px;
+                    max-height:140px;
+                    font-size: 20px;
+                    border: 1px solid black ; 
+                    box-shadow: 2px 3px 10px rgb(15, 14, 14);  
+                    background: rgba(255, 255, 255, 0.95);
+                    font-size: 15px;
+                }
                 label{
                     display: flex;
                     justify-content: space-between;
@@ -402,24 +417,66 @@ header{
                     border: 1px solid black ; 
                     box-shadow: 2px 3px 10px rgb(15, 14, 14);  
                     background: rgba(255, 255, 255, 0.95);
-                    
+                    text-align: start;
+                    margin: 0;
+                    padding: 5px;
                 
                 }
-            }
-        .form__item:last-child{
-            input{
-                height: 300%;
-            }
+                textarea:focus, input:focus{
+                    outline: 2px solid #d187aa;
+                }
+
+                input::-webkit-outer-spin-button,
+                input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+                }
+
+              
+                input[type=number] {
+                -moz-appearance: textfield;
+                }
+
+                .checkbox{
+                    display: flex;
+                    .checkbox__input{
+                        width: 50px;
+                    }
+                }
+                .form__button{
+                    position: absolute;
+                    width: 170px;
+                    height: 40px;
+                    bottom: 2%;
+                    left: 40%;
+                    border: 1px solid black ; 
+                    box-shadow: 2px 3px 10px rgb(15, 14, 14);  
+                    background: rgba(255, 255, 255, 0.75);
+                    font-size: 20px;
+                    font-family: $headerFont;
+                }
+                .form__button:hover{
+                   background: rgba(209, 135, 170, 0.7);
+                   bottom: 2.5%;
+                   left: 39.5%;
+                }
+                .form__button:active{
+                    background: rgba(209, 135, 170, 0.7);
+                    bottom: 2%;
+                    left: 40%;
+                 }
+              
+            }   
         }
-   
-    }
-    
+        textarea.about{
+            min-height: 100px;
+            resize: vertical;
+            }
 
 }
 .modal__active{
     opacity: 1;
     z-index: 4 !important;
-
     left: 66.9%;
 }
 .display__mode{

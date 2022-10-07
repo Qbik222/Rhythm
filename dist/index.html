@@ -180,28 +180,37 @@
  
     
     <div class="modal">
-        <h2 class="form__header">Sign Up for a trial training session</h2>
+     
         <form action="submit" >
+            <h2 class="form__title">Sign Up for a trial training session</h2>
             <div class="form__item">
-                <label class="form__name">Your name</label>
-                <input type="text">
+                <label for="formName" class="form__label form__name">Your name*:</label>
+                <input id="formName" type="text" name="name" class="form__input">
             </div>
             <div class="form__item">
-                <label class="form__childName">Child name</label>
-                <input type="text">
+                <label for="formChildName" class="form__label form__childName">Child name*:</label>
+                <input id="formChildName" type="text" name="childName" class="form__input">
             </div>
             <div class="form__item">
-                <label class="form__number">Your phone number</label>
-                <input type="number" placeholder="+380">
+                <label for="formNumber" class="form__label form__number">Your phone number*:</label>
+                <input id="formNumber" type="number" name="number" placeholder="+380">
             </div>
             <div class="form__item">
-                <label class="form__about">A little about you</label>   
-                <input type="text">
+                <label for="formAbout" class="form__label form__about">A little about you</label>   
+             
+                <textarea id="formAbout" name="aboutYou" class="about" rows="5" cols="50"></textarea>
+            </div>
+            <div class="form__item">
+               <div class="checkbox">
+                    <input  id="formAgreement" type="checkbox" name="agreement" class="checkbox__input">
+                    <label for="formAgreement" class="form__label"><span class="form__agreement"> I give my consent to the processing of personal data</span></label>
+               </div>
+               <button type="submit" class="form__button">Send</button>
             </div>
             
            
             
-                   
+           
         </form>
     </div>
    

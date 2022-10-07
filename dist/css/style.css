@@ -423,15 +423,6 @@ header .burger__open::after {
   transition: all 0.8s;
   left: 100%;
 }
-.modal h2 {
-  margin-bottom: 40px;
-  font-size: 40px;
-  color: black;
-  text-shadow: 0 0 6px white;
-  width: 60%;
-  padding: 0;
-  margin-left: 4.5%;
-}
 .modal form {
   width: 100%;
   display: flex;
@@ -440,10 +431,28 @@ header .burger__open::after {
   margin-left: 2%;
   gap: 1vh;
 }
+.modal form .form__title {
+  margin-bottom: 10px;
+  font-size: 40px;
+  color: black;
+  text-shadow: 0 0 6px white;
+  width: 60%;
+  padding: 0;
+  margin-left: 4.5%;
+}
 .modal form .form__item {
   display: flex;
   justify-content: space-between;
   width: 100%;
+}
+.modal form .form__item .about {
+  width: 300px;
+  max-height: 140px;
+  font-size: 20px;
+  border: 1px solid black;
+  box-shadow: 2px 3px 10px rgb(15, 14, 14);
+  background: rgba(255, 255, 255, 0.95);
+  font-size: 15px;
 }
 .modal form .form__item label {
   display: flex;
@@ -459,9 +468,52 @@ header .burger__open::after {
   border: 1px solid black;
   box-shadow: 2px 3px 10px rgb(15, 14, 14);
   background: rgba(255, 255, 255, 0.95);
+  text-align: start;
+  margin: 0;
+  padding: 5px;
 }
-.modal form .form__item:last-child input {
-  height: 300%;
+.modal form .form__item textarea:focus, .modal form .form__item input:focus {
+  outline: 2px solid #d187aa;
+}
+.modal form .form__item input::-webkit-outer-spin-button,
+.modal form .form__item input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.modal form .form__item input[type=number] {
+  -moz-appearance: textfield;
+}
+.modal form .form__item .checkbox {
+  display: flex;
+}
+.modal form .form__item .checkbox .checkbox__input {
+  width: 50px;
+}
+.modal form .form__item .form__button {
+  position: absolute;
+  width: 170px;
+  height: 40px;
+  bottom: 2%;
+  left: 40%;
+  border: 1px solid black;
+  box-shadow: 2px 3px 10px rgb(15, 14, 14);
+  background: rgba(255, 255, 255, 0.75);
+  font-size: 20px;
+  font-family: BarlowBold;
+}
+.modal form .form__item .form__button:hover {
+  background: rgba(209, 135, 170, 0.7);
+  bottom: 2.5%;
+  left: 39.5%;
+}
+.modal form .form__item .form__button:active {
+  background: rgba(209, 135, 170, 0.7);
+  bottom: 2%;
+  left: 40%;
+}
+.modal textarea.about {
+  min-height: 100px;
+  resize: vertical;
 }
 
 .modal__active {
