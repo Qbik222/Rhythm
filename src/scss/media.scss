@@ -1,0 +1,9 @@
+
+
+@mixin view1200 {
+    @media(max-width: 1200px){
+        body{
+            background: #000 !important;
+        }
+    } 
+}

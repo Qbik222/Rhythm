@@ -1,7 +1,11 @@
+
+@import "media";
 @import "fonts";
 @import "nullstyle";
 $headerFont: BarlowBold;
 $textFont: BarlowRegular;
+$fontSizeTextContent: 1.3vw;
+$fontSizeHeaderContent: 2.2vw;
 
 
 body{
@@ -21,64 +25,34 @@ header{
     position: sticky;
     top: 0;
     width: 100%;
-    max-width: 1350px;
+    max-width: 70.6vw;
     display: flex;
     justify-content: center;
-    height: 100px;
+    height: 9.2vh;
     z-index: 5;
 
     .header__wrapper{
         width: 100%;
         display: flex;
         justify-content: space-between;
-        .logo {
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            font-size: 24px;
-            color: white;
-            max-width: 350px;
-            margin-left: 40px;
-         
-           
-            
-            #logoImg{
-                margin-left: 10px;
-                width: 120px;
-        
-            }
-            h1{ 
-                position: relative;
-                bottom: 20px;
-               
-       
-            }
-            p{
-                position: relative;
-                bottom: 20px;
-                max-width: 100%;
-                font-family: BarlowRegular;
-          
-            }
-        }
         .header__menu{
             position: fixed;
             top: 0;
             right: 15vw;
-            margin-top: 25px;
+            margin-top: 3.3vh;
             display: flex;
             cursor: pointer;
             background: #d187aa;
-            height: 40px;
+            height: 4vh;
             width: 100%;
-            max-width: 100px;
+            max-width: 5.2vw;
             align-items: center;
             justify-content: space-around;
             z-index: 4;
             font-family: BarlowRegular;
             
             p{
-                font-size: 15px;
+                font-size: 0.8vw;
                 color: white;
                 text-transform: uppercase;
                 font-family: $textFont;
@@ -140,7 +114,7 @@ header{
         }
         .btn__active{
            display: block !important; 
-           font-size: 20px;
+           font-size: 1vw;
         }
 
 
@@ -155,16 +129,16 @@ header{
             background: rgba(129, 128, 128, 0.5);
             .social__Media{
                 display: flex;
-                gap: 50px;
+                gap: 2.6vw;
                 margin-top: 5%;
-                padding-top: 15px;
-                margin-bottom: 20px;
+                padding-top: 1.38vh;
+                margin-bottom: 1.85vh;
                 padding-left: 27%;
-                padding-bottom: 10px;
+                padding-bottom: 0.9vh;
            
                 .socialMedia-Instagram{
-                    width: 30px;
-                    height: 30px;
+                    width: 1.57vw;
+                    height: 2.77vh;
                  
                
                 }
@@ -175,8 +149,8 @@ header{
                     fill: red;
                 }
                 .socialMedia-Telegram{
-                    width: 30px;
-                    height: 30px;
+                    width: 1.57vw;
+                    height: 2.77vh;
                 }
                 .socialMedia-Telegram:hover{
                     position: relative;
@@ -187,8 +161,8 @@ header{
                 }
                 .socialMedia-Facebook{
                     cursor: pointer;
-                    width: 30px;
-                    height: 30px;
+                    width: 1.57vw;
+                    height: 2.77vh;
                 }
                 .socialMedia-Facebook:hover{
                     position: relative;
@@ -198,8 +172,8 @@ header{
                    
                 }
                 .socialMedia-Tiktok{
-                    width: 30px;
-                    height: 30px;
+                    width: 1.77vw;
+                    height: 2.77vh;
                 }
                 .socialMedia-Tiktok:hover{
                     position: relative;
@@ -223,8 +197,8 @@ header{
                 font-size: 40px;
                 // line-height: 10px;
                 text-align: center;
-                margin-right: 20px;
-                gap: 20px;
+                margin-right: 1vw;
+                gap: 1vw;
                 width: 100%;
                 height: 6vh;
                 transition: all 0.3s;
@@ -241,6 +215,20 @@ header{
            
         }
     }
+
+    .language{
+        position: fixed;
+        right: 22vw;
+        top: 3.3vh;
+        height: 4vh;
+        width: 3vw;
+        background: #d187aa;
+        font-size: 0.9vw;
+        color: white;
+        font-family: $textFont;
+        z-index: 5;
+    }
+
     .menu__open{
         bottom: 50vh !important;
     
@@ -252,7 +240,7 @@ header{
     }
     .burger__open::before{
        left: -7px !important;
-       width: 30px !important;
+       width: 1.57vw !important;
        border: 1px solid white;
        background: white !important;
        transform: rotate(45deg);
@@ -300,8 +288,8 @@ header{
 
 .carousel__slider {
     position: fixed;
-    bottom: -1px;
-    right: 60px;
+    bottom: 0;
+    right: 3.1vw;
     clip-path: polygon(90% 0, 100% 89%, 79% 97%, 80% 100%, 30% 100%, 0 100%, 1% 89%, 0 50%, 1% 24%, 0 0);
     width: 85vw;
     height: 86vh;
@@ -315,7 +303,6 @@ header{
     width: 100%;
     height: 100%;
     z-index: 2;
-    font-size: 20px;
     color: rgb(8, 4, 4);
     transition: all 1s ease ;
     img{
@@ -355,11 +342,13 @@ header{
     flex-direction: column;
     justify-content: center;
     padding-top: 45vh;
+    padding-left: 1vw;
     top: 0;
-    width: 33vw;
+    width: 33.4vw;
     height: 100vh;
-    background: url("../img/popupBg.jpg");
-    font-size: 20px;
+    background: url("../img/popupBg.jpg") no-repeat;
+    background-size: 135%;
+    font-size: 1vw;
     z-index: -1;
     opacity: 0;
     transition: all 0.8s;
@@ -380,7 +369,7 @@ header{
 
         .form__title{
             margin-bottom: 10px;
-            font-size: 40px;
+            font-size: 2vw;
             color: black;
             text-shadow: 0 0 6px white;
             width: 60%;
@@ -396,7 +385,7 @@ header{
                 .about{
                     width: 300px;
                     max-height:140px;
-                    font-size: 20px;
+                    font-size: 1.2vw;
                     border: 1px solid black ; 
                     box-shadow: 2px 3px 10px rgb(15, 14, 14);  
                     background: rgba(255, 255, 255, 0.95);
@@ -411,9 +400,9 @@ header{
                 
                 }
                 input{
-                    width: 300px;
+                    width: 15.7vw;
                     height: 30px;
-                    font-size: 20px;
+                    font-size: 1vw;
                     border: 1px solid black ; 
                     box-shadow: 2px 3px 10px rgb(15, 14, 14);  
                     background: rgba(255, 255, 255, 0.95);
@@ -439,20 +428,21 @@ header{
 
                 .checkbox{
                     display: flex;
+                    gap: 1vw;
                     .checkbox__input{
-                        width: 50px;
+                        width: 2.6vw;
                     }
                 }
                 .form__button{
                     position: absolute;
-                    width: 170px;
-                    height: 40px;
+                    width: 8.9vw;
+                    height: 3.7vh;
                     bottom: 2%;
                     left: 40%;
                     border: 1px solid black ; 
                     box-shadow: 2px 3px 10px rgb(15, 14, 14);  
                     background: rgba(255, 255, 255, 0.75);
-                    font-size: 20px;
+                    font-size: 1.1vw;
                     font-family: $headerFont;
                 }
                 .form__button:hover{
@@ -469,7 +459,8 @@ header{
             }   
         }
         textarea.about{
-            min-height: 100px;
+            min-height: 5.4vh;
+            max-width: 15.7vw ;
             resize: vertical;
             }
 
@@ -477,7 +468,7 @@ header{
 .modal__active{
     opacity: 1;
     z-index: 4 !important;
-    left: 66.9%;
+    left: 66.7%;
 }
 .display__mode{
    
@@ -494,7 +485,7 @@ header{
         position: relative;
         top: 10vh;
         left: 13vw;
-        font-size: 50px;
+        font-size: $fontSizeHeaderContent;
     }
 }
 .aboutUs__content{
@@ -506,29 +497,29 @@ header{
         position: absolute;
         right: 2vw;
         top: 2vh;
-        max-width: 500px ;
-        max-height: 500px ;
+        max-width: 26vw;
+        max-height: 46vh ;
     }
     #imgLeftAbout{
         position: absolute;
         left: 10vh;
         top: 13vh;
-        max-width: 500px ;
-        max-height: 500px ;
+        max-width: 26vw;
+        max-height: 46vh ;
     }
     p{
         position: absolute;
-        font-size: 30px;
+        font-size: $fontSizeTextContent;
         width: 45%;
-        right: 5vw;
+        right: 4vw;
         bottom: 5vh;
-        line-height: 40px;
+        line-height: 2.5vw;
     }
     a{
         position: absolute;
-        right: 12.5vw;
-        bottom: 5.5vh;
-        font-size: 30px;
+        left: 29vw;
+        bottom: 1.5vh;
+        font-size: $fontSizeTextContent;
 
     }
    
@@ -548,13 +539,13 @@ header{
         position: absolute;
         right: 3vw;
         top: 3vh;
-        font-size: 40px;
+        font-size: $fontSizeHeaderContent;
     }
     .location__street{
         position: relative;
         top:12vh;
         left: 4vw;
-        font-size: 25px;
+        font-size: $fontSizeTextContent;
     }
 
 }
@@ -573,15 +564,15 @@ header{
 .logo{
     position: relative;
     bottom: 0;
-    width: 170px;
-    height: 130px;
+    width: 8.9vw;
+    height: 12vh;
     transition: all 0.4s;
 
 }
 .logoHide{
     opacity: 0;
     position: relative;
-    bottom: 160px;
+    bottom: 20vh;
 }
 
 
@@ -590,15 +581,15 @@ footer{
     flex-direction: column;
     align-items: center;
     position: relative;
-    right: 12.7%;
+    right: 12.6%;
     display: flex;
-    height: 25vh;
+    height: 50vh;
     width: 58.8vw;
     background: rgb(196, 153, 196);
     z-index: 6;
     h2{
-        font-size: 40px;
-        margin-top: 20px;
+        font-size: $fontSizeHeaderContent;
+        margin-top: 1vw;
     }
     .Contacts{
         display: flex;
@@ -606,26 +597,25 @@ footer{
         align-items: center;
        
         h2{
-            font-size: 40px;
+            font-size: $fontSizeHeaderContent;
         }
         .contacts__info{
             display: flex;
-            margin-top: 20px;
-            gap: 70px;
+            margin-top: 1.85vh;
+            gap: 3.66vw;
             p{
-                font-size: 25px;
+                font-size: $fontSizeTextContent;
             }
         }
      
     }
     .social__Media{
         display: flex;
-        gap: 80px;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        gap: 4.1vw;
+        margin: 1.8vh;
         .socialMedia-Instagram{
-            width: 50px;
-            height: 50px;
+            width: 2.5vw;
+            height: 5vh;
        
        
         }
@@ -636,8 +626,9 @@ footer{
             fill: red;
         }
         .socialMedia-Telegram{
-            width: 50px;
-            height: 50px;
+            width: 2.5vw;
+            height: 5vh;
+       
         }
         .socialMedia-Telegram:hover{
             position: relative;
@@ -648,8 +639,9 @@ footer{
         }
         .socialMedia-Facebook{
             cursor: pointer;
-            width: 50px;
-            height: 50px;
+            width: 2.5vw;
+            height: 5vh;
+       
         }
         .socialMedia-Facebook:hover{
             position: relative;
@@ -659,8 +651,9 @@ footer{
            
         }
         .socialMedia-Tiktok{
-            width: 50px;
-            height: 50px;
+            width: 2.5vw;
+            height: 5vh;
+       
         }
         .socialMedia-Tiktok:hover{
             position: relative;
@@ -673,15 +666,6 @@ footer{
     }
 }
 
-.language{
-    position: fixed;
-    right: 22vw;
-    top: 2.65vh;
-    height: 40px;
-    width: 50px;
-    background: #d187aa;
-    font-size: 17px;
-    color: white;
-    font-family: $textFont;
-    z-index: 5;
-}
+
+
+
