@@ -4,7 +4,7 @@ const content = document.querySelector(".content");
 const sliderWindow = document.querySelector(".carousel__slider");
 const sliderWindowHeight = sliderWindow.getBoundingClientRect().height;
 
-console.log(sliderWindowHeight);
+// console.log(sliderWindowHeight);
 
 // console.log(sliderWindowPosition);
 // console.log(contentPosition)
@@ -17,14 +17,16 @@ window.addEventListener("scroll", () =>{
 
    let contentPosition = content.getBoundingClientRect().y;
    let contentCord = content.getBoundingClientRect().y +  window.pageYOffset;
+   let contentHeight = content.getBoundingClientRect().height;
 
    let sliderWindowPosition = sliderWindow.getBoundingClientRect().y
    const sliderWindowCord = sliderWindow.getBoundingClientRect().y +  window.pageYOffset;
 
-    // console.log(contentPosition)
+   //  console.log((contentHeight / 100)* 50 )
     // console.log(logoPosition)
     // console.log(contentCord)
-    // console.log(sliderWindowCord)
+   //  console.log(sliderWindowCord)
+   //  console.log(sliderWindowCord)
     // console.log(sliderWindowCord - contentPosition )
 
 
@@ -37,6 +39,9 @@ window.addEventListener("scroll", () =>{
        sliderWindow.style.height = sliderWindow.style.height = sliderWindow.clientHeight + (sliderWindowCord + contentCord);
     }
     if( sliderWindowCord - contentPosition < sliderWindowHeight){
+      sliderWindow.style.height = 86 + "vh";
+    }
+    if(sliderWindowHeight >= (contentHeight / 100)* 50 ){
       sliderWindow.style.height = 86 + "vh";
     }
 

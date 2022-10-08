@@ -8,14 +8,17 @@ import changeLanguage from "./modules/changeLng.js";
 import mapApi from "./modules/mapsApi.js";
 import * as flsFunctions from "./modules/functions.js";
 
+const content = document.querySelector(".content");
+
+
+
     flsFunctions.isWebp();
     slider();
     menuBurger();
-    asideShow();
+    asideShow(content);
     stickSlider();
-    hideLogo();
+    hideLogo(content);
     mapApi();
-
     changeLanguage(langArr);
 
 

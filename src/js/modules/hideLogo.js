@@ -1,13 +1,14 @@
-function hideLogo(){
+function hideLogo(content){
     const logo = document.querySelector(".logo")
 
     function hideLogoByScroll(){
-        console.log( window.pageYOffset + document.documentElement.clientHeight)
-        console.log(document.documentElement.scrollHeight);
-        if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight / 100 *10){
+        let contentPosition = content.getBoundingClientRect().y;
+        let logoHeight = logo.getBoundingClientRect().height;
+        // console.log(logoHeight)
+        if (contentPosition <= logoHeight){
             logo.classList.add("logoHide")  
             
-        }  if (window.pageYOffset + document.documentElement.clientHeight <= document.documentElement.scrollHeight / 100 * 44){
+        }  if (contentPosition > logoHeight){
             logo.classList.remove("logoHide")  
             
         }

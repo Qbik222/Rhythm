@@ -1,9 +1,20 @@
 
 
-@mixin view1200 {
-    @media(max-width: 1200px){
-        body{
-            background: #000 !important;
+@mixin view1366 {
+    @media(max-width: 1375px){
+        .burger__open::before{
+            top:  0.1vh;
+            border: 0.5px solid white !important;
         }
-    } 
+        .burger__open::after{
+            
+            border: 0.5px solid white !important;
+        }
+        .menu__open{
+          
+        }
+        footer{
+            right: 12.6%;
+        }
+    }
 }
