@@ -1,3 +1,6 @@
+"use strict";
+
+import formValidate from "./modules/formValidate.js";
 import hideLogo from "./modules/hideLogo.js";
 import stickSlider from "./modules/stickSlider.js";
 import asideShow from "./modules/aside.js";
@@ -8,8 +11,9 @@ import changeLanguage from "./modules/changeLng.js";
 import mapApi from "./modules/mapsApi.js";
 import * as flsFunctions from "./modules/functions.js";
 
-const content = document.querySelector(".content");
+document.addEventListener("DOMContentLoaded", () =>{
 
+    const content = document.querySelector(".content");
 
 
     flsFunctions.isWebp();
@@ -19,6 +23,9 @@ const content = document.querySelector(".content");
     stickSlider();
     hideLogo(content);
     mapApi();
+    formValidate();
     changeLanguage(langArr);
 
+
+})
 

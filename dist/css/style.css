@@ -463,6 +463,12 @@ header .burger__open::after {
   margin: 0;
   padding: 5px;
 }
+.modal form .form__item .form__input._error {
+  box-shadow: 0 0 15px red;
+}
+.modal form .form__item .checkbox__input._error {
+  box-shadow: 0 0 15px red;
+}
 .modal form .form__item textarea:focus, .modal form .form__item input:focus {
   outline: 2px solid #d187aa;
 }
@@ -476,10 +482,17 @@ header .burger__open::after {
 }
 .modal form .form__item .checkbox {
   display: flex;
+  align-items: center;
   gap: 1vw;
+  cursor: pointer;
 }
 .modal form .form__item .checkbox .checkbox__input {
-  width: 2.6vw;
+  width: 2vw;
+  cursor: pointer;
+}
+.modal form .form__item .checkbox .checkbox__input:focus {
+  outline: none;
+  border: none;
 }
 .modal form .form__item .form__button {
   position: absolute;
