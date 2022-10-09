@@ -1,8 +1,9 @@
-function hideLogo(content){
+function hideLogo(){
     const logo = document.querySelector(".logo")
+    const slider = document.querySelector(".slider__item")
 
     function hideLogoByScroll(){
-        let contentPosition = content.getBoundingClientRect().y;
+        let contentPosition = slider.getBoundingClientRect().y;
         let logoHeight = logo.getBoundingClientRect().height;
         // console.log(logoHeight)
         if (contentPosition <= logoHeight){

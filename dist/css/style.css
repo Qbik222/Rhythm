@@ -1030,7 +1030,7 @@ footer .social__Media .socialMedia-Tiktok:hover {
   .content .aboutUs__container .aboutUs__content {
     position: relative;
     width: 100%;
-    height: 55vw;
+    height: 60vh;
   }
   .content .aboutUs__container .aboutUs__content #imgRightAbout {
     right: 4vw;
@@ -1042,7 +1042,7 @@ footer .social__Media .socialMedia-Tiktok:hover {
     left: 2vh;
     top: 13vh;
     max-width: 40vw;
-    max-height: 56vh;
+    max-height: 56vw;
   }
   .content .aboutUs__container .aboutUs__content p {
     font-size: 2.5vw;
@@ -1052,7 +1052,7 @@ footer .social__Media .socialMedia-Tiktok:hover {
   }
   .content .aboutUs__container .aboutUs__content a {
     left: 45vw;
-    bottom: 5vh;
+    top: 50vh;
     font-size: 2.5vw;
   }
   .content .map__container {
@@ -1206,7 +1206,7 @@ footer .social__Media .socialMedia-Tiktok:hover {
   .content .aboutUs__container .aboutUs__content {
     position: relative;
     width: 100%;
-    height: 40.5vh;
+    height: 55vh;
   }
   .content .aboutUs__container .aboutUs__content #imgLeftAbout {
     left: 2vh;
@@ -1222,7 +1222,7 @@ footer .social__Media .socialMedia-Tiktok:hover {
   }
   .content .aboutUs__container .aboutUs__content a {
     left: 5vw;
-    bottom: 0vh;
+    top: 40vh;
     font-size: 5vw;
   }
   .content .map__container {
@@ -1276,9 +1276,12 @@ footer .social__Media .socialMedia-Tiktok:hover {
     height: 3.77vh;
   }
 }
-@media (max-width: 380px) {
+@media (max-width: 390px) {
   .content .aboutUs__container .aboutUs__content {
-    height: 46vh;
+    height: 50vh;
+  }
+  .content .aboutUs__container .aboutUs__content a {
+    top: 39vh;
   }
   header .header__wrapper .language {
     height: 5vh;

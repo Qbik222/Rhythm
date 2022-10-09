@@ -451,7 +451,7 @@
                 .aboutUs__content{
                     position: relative;
                     width: 100%;
-                    height: 55vw;
+                    height: 60vh;
                 
                     #imgRightAbout{
               
@@ -464,7 +464,7 @@
                         left: 2vh;
                         top: 13vh;
                         max-width: 40vw;
-                        max-height: 56vh ;
+                        max-height: 56vw ;
                     }
                     p{
                         font-size: $fontSizeTextContent;
@@ -474,7 +474,7 @@
                     }
                     a{
                         left: 45vw;
-                        bottom: 5vh;
+                        top: 50vh;
                         font-size: $fontSizeTextContent;
                 
                     }
@@ -687,7 +687,6 @@
             width: 100vw;
             clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 70%, 100% 100%, 57% 100%, 18% 100%, 0 100%, 0% 35%, 0 0);
             padding: 0;
-        
             right: 0;
             margin-top: 5vh;
             z-index: 2;
@@ -704,7 +703,7 @@
                 .aboutUs__content{
                     position: relative;
                     width: 100%;
-                    height: 40.5vh;
+                    height: 55vh;
                 
               
                     #imgLeftAbout{
@@ -721,7 +720,7 @@
                     }
                     a{
                         left: 5vw;
-                        bottom: 0vh;
+                        top: 40vh;
                         font-size: 5vw;
                 
                     }
@@ -802,12 +801,15 @@
 
 }
 @mixin view380{
-    @media (max-width: 380px) {
+    @media (max-width: 390px) {
 
       .content{
         .aboutUs__container{
             .aboutUs__content{
-                height: 46vh;
+                height: 50vh;
+                a{
+                    top: 39vh;
+                }
             }
         }
       }
