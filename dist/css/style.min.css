@@ -130,7 +130,7 @@ header .header__wrapper {
 header .header__wrapper .header__menu {
   position: fixed;
   top: 0;
-  right: 15vw;
+  right: 15.5vw;
   margin-top: 3.3vh;
   display: flex;
   cursor: pointer;
@@ -159,25 +159,25 @@ header .header__wrapper .header__menu:hover .header__burger::before {
 }
 header .header__wrapper .header__burger {
   position: relative;
-  bottom: 10px;
-  margin-top: 10px;
+  bottom: 0.92vh;
+  margin-top: 0.92vh;
   display: block;
   height: 1px;
   width: 1vw;
   border-top: 2px solid white;
-  padding-top: 5px;
+  padding-top: 0.46vh;
   z-index: 4;
 }
 header .header__wrapper .header__burger::before {
   position: relative;
-  left: 3px;
+  left: 0.16vw;
   right: 0;
   display: block;
   content: "";
   border-bottom: 2px solid white;
   height: 1px;
   width: 1vw;
-  margin-bottom: 5px;
+  margin-bottom: 0.46vh;
   transition: all 0.3s;
 }
 header .header__wrapper .header__burger::after {
@@ -194,7 +194,7 @@ header .header__wrapper .open {
   display: none;
 }
 header .header__wrapper .btn__active {
-  display: block !important;
+  display: block;
   font-size: 1vw;
 }
 header .header__wrapper .header__menu-panel {
@@ -283,6 +283,44 @@ header .header__wrapper .header__menu-panel li:hover {
   transition: all 0.3s;
   color: white;
 }
+header .header__wrapper .menu__open {
+  bottom: 50vh;
+}
+header .header__wrapper .burger__open {
+  position: relative;
+  bottom: 0.92vh;
+  left: 0.1vw;
+  margin-top: 0.92vh;
+  display: block;
+  height: 1px;
+  width: 1vw;
+  border: none;
+  padding-top: 0.46vh;
+  z-index: 4;
+}
+header .header__wrapper .burger__open::before {
+  position: relative;
+  right: 0.4vw;
+  display: block;
+  content: "";
+  border-bottom: 2px solid white;
+  height: 1px;
+  width: 1.57vw;
+  margin-bottom: 0.36vh;
+  transition: all 0.3s;
+  transform: rotate(45deg);
+}
+header .header__wrapper .burger__open::after {
+  position: relative;
+  display: block;
+  content: "";
+  border-top: 2px solid white;
+  transition: all 0.3s;
+  transform: rotate(-45deg);
+  bottom: 0.62vh;
+  right: 0.4vw;
+  width: 1.57vw;
+}
 header .language {
   position: fixed;
   right: 22vw;
@@ -295,34 +333,6 @@ header .language {
   font-family: BarlowRegular;
   z-index: 5;
 }
-header .menu__open {
-  bottom: 50vh !important;
-}
-header .burger__open {
-  position: fixed;
-  border: none !important;
-}
-header .burger__open::before {
-  left: -0.3vw !important;
-  width: 1.57vw !important;
-  border: 1px solid white;
-  background: white !important;
-  transform: rotate(45deg);
-  margin: 0 !important;
-  padding: 0 !important;
-  transition: all 0.3s;
-}
-header .burger__open::after {
-  bottom: 0.3vh;
-  right: 0.3vw;
-  width: 1.57vw !important;
-  border: 1px solid white;
-  background: white !important;
-  transform: rotate(-45deg);
-  padding: 0 !important;
-  margin: 0 !important;
-  transition: all 0.3s;
-}
 
 .content {
   position: relative;
@@ -332,7 +342,7 @@ header .burger__open::after {
   flex-direction: column;
   align-items: center;
   width: 60vw;
-  height: 3000px;
+  height: 300vh;
   background: #d187aa;
   z-index: 5;
   margin-top: 1px;
@@ -396,6 +406,24 @@ header .burger__open::after {
   opacity: 0;
 }
 
+.modal::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8) url("../files/loading.gif") center no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease 0s;
+}
+
+.modal._sending::after {
+  opacity: 1;
+  visibility: visible;
+}
+
 .modal {
   display: flex;
   position: fixed;
@@ -406,7 +434,7 @@ header .burger__open::after {
   top: 0;
   width: 33.4vw;
   height: 100vh;
-  background: url("../img/popupBg.jpg") no-repeat;
+  background: url("../img/asideBG.jpg") no-repeat;
   background-size: 130%;
   font-size: 1vw;
   z-index: -1;
@@ -415,6 +443,7 @@ header .burger__open::after {
   left: 100%;
 }
 .modal form {
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -498,7 +527,7 @@ header .burger__open::after {
   position: absolute;
   width: 8.9vw;
   height: 3.7vh;
-  bottom: 2%;
+  top: 95%;
   left: 40%;
   border: 1px solid black;
   box-shadow: 2px 3px 10px rgb(15, 14, 14);
@@ -537,14 +566,17 @@ header .burger__open::after {
   top: 10vh;
   left: 13vw;
   font-size: 2.2vw;
+  width: 50%;
 }
 
 .aboutUs__content {
+  display: flex;
   position: relative;
   width: 60vw;
   height: 65vh;
 }
 .aboutUs__content #imgRightAbout {
+  display: none;
   position: absolute;
   right: 2vw;
   top: 2vh;
@@ -552,24 +584,24 @@ header .burger__open::after {
   max-height: 46vh;
 }
 .aboutUs__content #imgLeftAbout {
-  position: absolute;
+  position: relative;
   left: 10vh;
   top: 13vh;
   max-width: 26vw;
   max-height: 46vh;
 }
 .aboutUs__content p {
-  position: absolute;
+  position: relative;
   font-size: 1.3vw;
   width: 45%;
-  right: 4vw;
-  bottom: 5vh;
-  line-height: 2.5vw;
+  left: 7vw;
+  top: 15vh;
+  line-height: 2.1vw;
 }
 .aboutUs__content a {
   position: absolute;
   left: 29vw;
-  bottom: 1.5vh;
+  bottom: 7.5vh;
   font-size: 1.3vw;
 }
 
@@ -591,6 +623,7 @@ header .burger__open::after {
   top: 12vh;
   left: 4vw;
   font-size: 1.3vw;
+  width: 50%;
 }
 
 #map {
@@ -695,6 +728,14 @@ footer .social__Media .socialMedia-Tiktok:hover {
   fill: purple;
 }
 
+@media (max-width: 1620px) {
+  .aboutUs__content p {
+    bottom: 20%;
+  }
+  .aboutUs__content a {
+    bottom: 15%;
+  }
+}
 @media (max-width: 1375px) {
   .burger__open::before {
     top: 0.1vh;
@@ -705,5 +746,533 @@ footer .social__Media .socialMedia-Tiktok:hover {
   }
   footer {
     right: 12.6%;
+  }
+  .aboutUs__content {
+    height: 50vh;
+  }
+  .aboutUs__content #imgRightAbout {
+    right: 4vw;
+    top: 2vh;
+    max-width: 24vw;
+    max-height: 42vh;
+  }
+  .aboutUs__content #imgLeftAbout {
+    left: 5vh;
+    top: 13vh;
+    max-width: 20vw;
+    max-height: 40vh;
+  }
+  .aboutUs__content p {
+    top: 9vh;
+    left: 6vw;
+    font-size: 1.5vw;
+  }
+  .aboutUs__content a {
+    bottom: -7vh;
+    left: 25vw;
+  }
+  .modal {
+    height: 100%;
+  }
+}
+@media (max-width: 1440px) {
+  .modal {
+    background: url("../img/asideBG900px.jpg") no-repeat;
+    background-size: 100%;
+  }
+}
+@media (max-width: 1030px) {
+  header .logo {
+    height: 14vh;
+    width: 13vw;
+  }
+  header .language {
+    width: 4.5vw;
+    border: 1px solid #875f91;
+    font-size: 1.2vw;
+  }
+  header .header__wrapper .header__menu {
+    border: 1px solid #875f91;
+  }
+  header .header__wrapper .header__menu .btn__active {
+    display: none;
+  }
+  header .header__wrapper .header__menu .header__burger {
+    bottom: 1.2vh;
+    width: 2vw;
+    margin-top: 8px;
+    padding-top: 7px;
+  }
+  header .header__wrapper .header__menu .header__burger::before {
+    width: 2vw;
+    left: 5px;
+    margin-bottom: 7px;
+  }
+  header .header__wrapper .header__menu .burger__open {
+    left: 0;
+    width: 1vw;
+  }
+  header .header__wrapper .header__menu .burger__open::before {
+    right: 1vw;
+    width: 3vw;
+  }
+  header .header__wrapper .header__menu .burger__open::after {
+    right: 1vw;
+    width: 3vw;
+  }
+  header .header__wrapper .header__menu-panel {
+    width: 100%;
+    height: 50vh;
+    bottom: 100vh;
+    z-index: 3;
+    background: rgba(129, 128, 128, 0.7);
+  }
+  header .header__wrapper .header__menu-panel .social__Media {
+    gap: 5.6vw;
+    margin-top: 0%;
+    padding-top: 1%;
+    padding-left: 30%;
+  }
+  header .header__wrapper .header__menu-panel .social__Media .socialMedia-Instagram {
+    width: 4.77vw;
+    height: 7.77vh;
+  }
+  header .header__wrapper .header__menu-panel .social__Media .socialMedia-Telegram {
+    width: 4.77vw;
+    height: 7.77vh;
+  }
+  header .header__wrapper .header__menu-panel .social__Media .socialMedia-Facebook {
+    width: 4.77vw;
+    height: 7.77vh;
+  }
+  header .header__wrapper .header__menu-panel .social__Media .socialMedia-Tiktok {
+    width: 4.77vw;
+    height: 7.77vh;
+  }
+  header .header__wrapper .header__menu-panel ul {
+    margin-top: 5vh;
+  }
+  header .header__wrapper .header__menu-panel li {
+    font-size: 3vw;
+    height: 7vh;
+  }
+  header .header__wrapper .menu__open {
+    bottom: 50vh;
+  }
+  .spacer {
+    display: none;
+  }
+  .carousel__slider {
+    height: 55vh !important;
+    bottom: 30vh;
+  }
+  .content {
+    width: 100vw;
+    clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 70%, 100% 100%, 57% 100%, 18% 100%, 0 100%, 0% 35%, 0 0);
+    padding: 0;
+    right: 0;
+    margin-top: 65vh;
+    z-index: 2;
+  }
+  .content .aboutUs__container {
+    width: 100%;
+  }
+  .content .aboutUs__container h2 {
+    font-size: 4.5vw;
+    top: 8vh;
+    left: 5%;
+  }
+  .content .aboutUs__container .aboutUs__content {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+  }
+  .content .aboutUs__container .aboutUs__content #imgRightAbout {
+    right: 4vw;
+    top: 2vh;
+    max-width: 44vw;
+    max-height: 82vh;
+  }
+  .content .aboutUs__container .aboutUs__content #imgLeftAbout {
+    left: 5vh;
+    top: 13vh;
+    max-width: 36vw;
+    max-height: 56vh;
+  }
+  .content .aboutUs__container .aboutUs__content p {
+    font-size: 2vw;
+    left: 7vw;
+    top: 15vh;
+    line-height: 3.5vw;
+  }
+  .content .aboutUs__container .aboutUs__content a {
+    left: 42vw;
+    bottom: 1vh;
+    font-size: 2vw;
+  }
+  .content .map__container .location__headerText {
+    font-size: 4.5vw;
+  }
+  .content .map__container .location__street {
+    font-size: 2vw;
+  }
+  .modal {
+    display: none;
+  }
+  .modal form {
+    display: none;
+  }
+  footer {
+    width: 100vw;
+    right: 0%;
+  }
+  footer h2 {
+    font-size: 4.5vw;
+    margin-top: 1vw;
+  }
+  footer .Contacts h2 {
+    font-size: 4.5vw;
+  }
+  footer .Contacts .contacts__info {
+    margin-top: 2.85vh;
+    gap: 6.66vw;
+  }
+  footer .Contacts .contacts__info p {
+    font-size: 2vw;
+  }
+  footer .social__Media {
+    gap: 8.1vw;
+  }
+  footer .social__Media .socialMedia-Instagram {
+    width: 4.77vw;
+    height: 7.77vh;
+  }
+  footer .social__Media .socialMedia-Telegram {
+    width: 4.77vw;
+    height: 7.77vh;
+  }
+  footer .social__Media .socialMedia-Facebook {
+    cursor: pointer;
+    width: 4.77vw;
+    height: 7.77vh;
+  }
+  footer .social__Media .socialMedia-Tiktok {
+    width: 4.77vw;
+    height: 7.77vh;
+  }
+}
+@media (max-width: 867px) {
+  body {
+    overflow-x: hidden !important;
+  }
+  header .logo {
+    height: 9vh;
+    width: 16vw;
+  }
+  header .language {
+    width: 5.5vw;
+    border: 1px solid #875f91;
+    font-size: 2vw;
+  }
+  header .header__wrapper .header__menu {
+    border: 1px solid #875f91;
+    width: 8vw;
+  }
+  header .header__wrapper .header__menu .btn__active {
+    display: none;
+  }
+  header .header__wrapper .header__menu .header__burger {
+    bottom: 0.9vh;
+    width: 3vw;
+  }
+  header .header__wrapper .header__menu .header__burger::before {
+    width: 3vw;
+  }
+  header .header__wrapper .header__menu .burger__open {
+    left: 0;
+    width: 1vw;
+  }
+  header .header__wrapper .header__menu .burger__open::before {
+    right: 1.4vw;
+    width: 4vw;
+  }
+  header .header__wrapper .header__menu .burger__open::after {
+    bottom: 0.4vh;
+    right: 1.4vw;
+    width: 4vw;
+  }
+  .carousel__slider {
+    position: relative;
+    height: 35vh !important;
+    width: 90vw;
+    left: 5vw;
+    bottom: -2vh;
+  }
+  .spacer {
+    display: none;
+  }
+  .content {
+    width: 100vw;
+    clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 70%, 100% 100%, 57% 100%, 18% 100%, 0 100%, 0% 35%, 0 0);
+    padding: 0;
+    right: 0;
+    margin-top: 5vh;
+    z-index: 2;
+  }
+  .content .aboutUs__container {
+    width: 100%;
+  }
+  .content .aboutUs__container h2 {
+    font-size: 5vw;
+    top: 8vh;
+    left: 6%;
+  }
+  .content .aboutUs__container .aboutUs__content {
+    position: relative;
+    width: 100%;
+    height: 55vh;
+  }
+  .content .aboutUs__container .aboutUs__content #imgRightAbout {
+    right: 4vw;
+    top: 2vh;
+    max-width: 44vw;
+    max-height: 82vh;
+  }
+  .content .aboutUs__container .aboutUs__content #imgLeftAbout {
+    left: 2vh;
+    top: 13vh;
+    max-width: 40vw;
+    max-height: 56vw;
+  }
+  .content .aboutUs__container .aboutUs__content p {
+    font-size: 2.5vw;
+    left: 6vw;
+    top: 14vh;
+    line-height: 3.5vw;
+  }
+  .content .aboutUs__container .aboutUs__content a {
+    left: 45vw;
+    bottom: 5vh;
+    font-size: 2.5vw;
+  }
+  .content .map__container {
+    margin-top: 2vh;
+  }
+  .content .map__container .location__headerText {
+    font-size: 5vw;
+  }
+  .content .map__container .location__street {
+    font-size: 2.5vw;
+  }
+  .wrapper {
+    width: 100vw;
+  }
+  footer {
+    position: relative;
+    width: 100vw;
+    height: 40vh;
+    right: 0%;
+  }
+  footer h2 {
+    font-size: 5vw;
+    margin-top: 1vw;
+  }
+  footer .Contacts h2 {
+    font-size: 5vw;
+  }
+  footer .Contacts .contacts__info {
+    margin-top: 2.85vh;
+    gap: 6.66vw;
+  }
+  footer .Contacts .contacts__info p {
+    font-size: 2.5vw;
+  }
+  footer .social__Media {
+    gap: 8.1vw;
+  }
+  footer .social__Media .socialMedia-Instagram {
+    width: 4.77vw;
+    height: 7.77vh;
+  }
+  footer .social__Media .socialMedia-Telegram {
+    width: 4.77vw;
+    height: 7.77vh;
+  }
+  footer .social__Media .socialMedia-Facebook {
+    cursor: pointer;
+    width: 4.77vw;
+    height: 7.77vh;
+  }
+  footer .social__Media .socialMedia-Tiktok {
+    width: 4.77vw;
+    height: 7.77vh;
+  }
+}
+@media (max-width: 776px) {
+  .content .aboutUs__container .aboutUs__content {
+    height: 60vh;
+  }
+}
+@media (max-width: 450px) {
+  body.lock {
+    overflow: hidden;
+  }
+  header .logo {
+    height: 10vh;
+    width: 26vw;
+  }
+  header .language {
+    width: 10vw;
+    border: 1px solid #875f91;
+    font-size: 3vw;
+  }
+  header .header__wrapper .header__menu {
+    width: 10vw;
+    max-width: 20vw;
+    right: 10vw;
+  }
+  header .header__wrapper .header__menu .header__burger {
+    width: 5vw;
+  }
+  header .header__wrapper .header__menu .header__burger::before {
+    width: 5vw;
+  }
+  header .header__wrapper .header__menu .burger__open::before {
+    right: 2.4vw;
+    width: 6vw;
+  }
+  header .header__wrapper .header__menu .burger__open::after {
+    bottom: 0.5vh;
+    right: 2.4vw;
+    width: 6vw;
+  }
+  header .header__wrapper .header__menu-panel {
+    width: 100%;
+    height: 100vh;
+    bottom: 100vh;
+    z-index: 3;
+    background: rgba(129, 128, 128, 0.7);
+  }
+  header .header__wrapper .header__menu-panel .social__Media {
+    gap: 17.6vw;
+    margin-top: 0%;
+    padding-top: 1%;
+    padding-left: 4%;
+    padding-right: 2%;
+  }
+  header .header__wrapper .header__menu-panel .social__Media .socialMedia-Instagram {
+    width: 10vw;
+    height: 10vh;
+  }
+  header .header__wrapper .header__menu-panel .social__Media .socialMedia-Telegram {
+    width: 10vw;
+    height: 10vh;
+  }
+  header .header__wrapper .header__menu-panel .social__Media .socialMedia-Facebook {
+    width: 10vw;
+    height: 10vh;
+  }
+  header .header__wrapper .header__menu-panel .social__Media .socialMedia-Tiktok {
+    width: 10vw;
+    height: 10vh;
+  }
+  header .header__wrapper .header__menu-panel ul {
+    margin-top: 10vh;
+  }
+  header .header__wrapper .header__menu-panel li {
+    font-size: 10vw;
+    height: 15vh;
+  }
+  header .header__wrapper .menu__open {
+    bottom: 0vh;
+    overflow: hidden;
+  }
+  .content {
+    width: 100vw;
+    clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 70%, 100% 100%, 57% 100%, 18% 100%, 0 100%, 0% 35%, 0 0);
+    padding: 0;
+    right: 0;
+    margin-top: 5vh;
+    z-index: 2;
+  }
+  .content .aboutUs__container {
+    width: 100%;
+  }
+  .content .aboutUs__container h2 {
+    font-size: 8vw;
+    top: 8vh;
+    left: 8%;
+  }
+  .content .aboutUs__container .aboutUs__content {
+    position: relative;
+    width: 100%;
+    height: 40.5vh;
+  }
+  .content .aboutUs__container .aboutUs__content #imgLeftAbout {
+    left: 2vh;
+    top: 10vh;
+    max-width: 43vw;
+    max-height: 58vw;
+  }
+  .content .aboutUs__container .aboutUs__content p {
+    font-size: 3vw;
+    left: 6vw;
+    top: 10vh;
+    line-height: 4vw;
+  }
+  .content .aboutUs__container .aboutUs__content a {
+    left: 5vw;
+    bottom: 0vh;
+    font-size: 5vw;
+  }
+  .content .map__container {
+    margin-top: 2vh;
+  }
+  .content .map__container .location__headerText {
+    font-size: 8vw;
+  }
+  .content .map__container .location__street {
+    font-size: 3vw;
+  }
+  footer {
+    position: relative;
+    width: 100vw;
+    height: 40vh;
+    right: 0%;
+  }
+  footer h2 {
+    font-size: 8vw;
+    margin-top: 1vw;
+  }
+  footer .Contacts h2 {
+    font-size: 8vw;
+  }
+  footer .Contacts .contacts__info {
+    margin-top: 2.85vh;
+    margin-bottom: 2vh;
+    gap: 6.66vw;
+  }
+  footer .Contacts .contacts__info p {
+    font-size: 3vw;
+  }
+  footer .social__Media {
+    gap: 9.1vw;
+  }
+  footer .social__Media .socialMedia-Instagram {
+    width: 7.77vw;
+    height: 3.77vh;
+  }
+  footer .social__Media .socialMedia-Telegram {
+    width: 7.77vw;
+    height: 3.77vh;
+  }
+  footer .social__Media .socialMedia-Facebook {
+    cursor: pointer;
+    width: 7.77vw;
+    height: 3.77vh;
+  }
+  footer .social__Media .socialMedia-Tiktok {
+    width: 7.77vw;
+    height: 3.77vh;
   }
 }

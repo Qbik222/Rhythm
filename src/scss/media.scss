@@ -1,7 +1,32 @@
 
+@mixin view1600{
+    @media(max-width: 1620px){
+        .aboutUs__content{
+            p{
+                bottom: 20%;
+            }
+            a{
+                bottom: 15%;
+            }
+        }
+    }
+}
 
+ @mixin view1440 {
+    @media (max-width: 1440px) {
+     .modal{
+        background: url("../img/asideBG900px.jpg") no-repeat ;
+        background-size: 100%;
+   
+     }   
+
+    }
+    
+ }
 @mixin view1366 {
     @media(max-width: 1375px){
+        $fontSizeHeaderContent: 3vw;
+        $fontSizeTextContent: 1.5vw;
         .burger__open::before{
             top:  0.1vh;
             border: 0.5px solid white !important;
@@ -10,11 +35,766 @@
             
             border: 0.5px solid white !important;
         }
-        .menu__open{
-          
-        }
+
         footer{
             right: 12.6%;
+        }
+        .aboutUs__content{
+            height: 50vh;
+            #imgRightAbout{
+              
+                right: 4vw;
+                top: 2vh;
+                max-width: 24vw;
+                max-height: 42vh ;
+            }
+            #imgLeftAbout{
+                left: 5vh;
+                top: 13vh;
+                max-width: 20vw;
+                max-height: 40vh ;
+            }
+            p{
+                top: 9vh;
+                left: 6vw;
+                font-size: $fontSizeTextContent;
+            }
+            a{
+                bottom: -7vh;
+                left: 25vw;
+            }
+        }
+        .modal{
+            height: 100%;
+           
+          
+        }
+ 
+    }
+}
+@mixin view1024{
+    @media (max-width: 1030px) {
+        $fontSizeHeaderContent: 4.5vw;
+        $fontSizeTextContent: 2vw;
+        $SocialMediaIconHeight: 7.77vh;
+        $SocialMediaIconWidth: 4.77vw;
+        header{
+            .logo{
+                height: 14vh;
+                width: 13vw;
+            }
+            .language{
+                width: 4.5vw;
+                border: 1px solid #875f91;
+                font-size: 1.2vw;
+             }
+             .header__wrapper{
+
+                .header__menu{
+                    border: 1px solid #875f91;
+                    .btn__active{
+                        display: none;
+                    }
+                    
+                    .header__burger{
+                        bottom: 1.2vh;
+                        width: 2vw;
+                        margin-top: 8px;
+                        padding-top: 7px;
+                    }
+                    .header__burger::before{
+                        width: 2vw;
+                        left: 5px;
+                        margin-bottom: 7px;
+                    }
+                    .burger__open{
+                        left: 0;
+                        width: 1vw;
+                  
+                        
+                    }
+                    .burger__open::before{
+                        right: 1vw;
+                        width: 3vw ;
+                    }
+                    .burger__open::after{
+                        right: 1vw;
+                        width: 3vw ;
+                        
+                    }
+                
+                       
+                
+                }
+                .header__menu-panel{
+                    width: 100%;
+                    height: 50vh;
+                    bottom: 100vh;
+                    z-index: 3;
+                    background: rgba(129, 128, 128, 0.7);
+                    .social__Media{
+                        gap: 5.6vw;
+                        margin-top: 0%;
+                        padding-top: 1%;
+                        padding-left: 30%;
+                        .socialMedia-Instagram{
+                            width: $SocialMediaIconWidth;
+                            height: $SocialMediaIconHeight;
+                        }
+                  
+                        .socialMedia-Telegram{
+                            width: $SocialMediaIconWidth;
+                            height: $SocialMediaIconHeight;
+                        }
+                 
+                        .socialMedia-Facebook{
+                            width: $SocialMediaIconWidth;
+                            height: $SocialMediaIconHeight;
+                        }
+                        .socialMedia-Tiktok{
+                            width: $SocialMediaIconWidth;
+                            height: $SocialMediaIconHeight;
+                        }
+                    }
+                    ul{
+                        margin-top: 5vh;
+                    }
+                    li{
+                        font-size: 3vw;
+                            height: 7vh;
+                    }
+
+                   
+                }
+                .menu__open{
+                    bottom: 50vh;
+                
+                }
+             }
+         
+        
+        }
+        .spacer{
+            display: none;
+        }
+        .carousel__slider{
+            height: 55vh !important;
+            bottom: 30vh;
+        }
+
+        .content{
+            width: 100vw;
+            clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 70%, 100% 100%, 57% 100%, 18% 100%, 0 100%, 0% 35%, 0 0);
+            padding: 0;
+            right: 0;
+            margin-top: 65vh;
+            z-index: 2;
+
+            .aboutUs__container{
+                width: 100%;
+
+                h2{
+                    font-size: $fontSizeHeaderContent;
+                    top: 8vh;
+                    left: 5%;
+               
+                }
+                .aboutUs__content{
+                    position: relative;
+                    width: 100%;
+                    height: 70vh;
+                
+                    #imgRightAbout{
+              
+                        right: 4vw;
+                        top: 2vh;
+                        max-width: 44vw;
+                        max-height: 82vh ;
+                    }
+                    #imgLeftAbout{
+                        left: 5vh;
+                        top: 13vh;
+                        max-width: 36vw;
+                        max-height: 56vh ;
+                    }
+                    p{
+                        font-size: $fontSizeTextContent;
+                        left: 7vw ;
+                        top: 15vh;
+                        line-height: 3.5vw;
+                    }
+                    a{
+                        left: 42vw;
+                        bottom: 1vh;
+                        font-size: $fontSizeTextContent;
+                
+                    }
+                   
+                }
+                
+            }
+            .map__container{
+              
+                .location__headerText{
+                    font-size: $fontSizeHeaderContent;
+                }
+                .location__street{
+                    font-size: $fontSizeTextContent;
+                }
+            
+            }
+
+         }
+        .modal{
+            display: none;
+            form{
+                display: none;
+            }
+        }
+        footer{
+            width: 100vw;
+            right: 0%;
+            h2{
+                font-size: $fontSizeHeaderContent;
+                margin-top: 1vw;
+            }
+            .Contacts{
+               
+                h2{
+                    font-size: $fontSizeHeaderContent;
+                }
+                .contacts__info{
+                    margin-top: 2.85vh;
+                    gap: 6.66vw;
+                    p{
+                        font-size: $fontSizeTextContent;
+                    }
+                }
+             
+            }
+            .social__Media{
+             
+                gap: 8.1vw;
+                .socialMedia-Instagram{
+                    width: $SocialMediaIconWidth;
+                    height: $SocialMediaIconHeight;
+               
+               
+                }
+             
+                .socialMedia-Telegram{
+                    width: $SocialMediaIconWidth;
+                    height: $SocialMediaIconHeight;
+               
+                }
+             
+                .socialMedia-Facebook{
+                    cursor: pointer;
+                    width: $SocialMediaIconWidth;
+                    height: $SocialMediaIconHeight;
+                }
+             
+                .socialMedia-Tiktok{
+                    width: $SocialMediaIconWidth;
+                    height: $SocialMediaIconHeight;
+               
+                }
+             
+        
+            }
+        }
+     
+ 
+    }
+}
+@mixin  view867 {
+
+    @media(max-width: 867px){
+        $fontSizeHeaderContent: 5vw;
+        $fontSizeTextContent: 2.5vw;
+        $SocialMediaIconHeight: 7.77vh;
+        $SocialMediaIconWidth: 4.77vw;
+     
+        body{
+            overflow-x: hidden !important;
+        }
+        header{
+            .logo{
+                height: 9vh;
+                width: 16vw;
+            }
+            .language{
+                width: 5.5vw;
+                border: 1px solid #875f91;
+                font-size: 2vw;
+             }
+             .header__wrapper{
+
+                .header__menu{
+                    border: 1px solid #875f91;
+                    width: 8vw;
+                    
+                    .btn__active{
+                        display: none;
+                    }
+                    
+                    .header__burger{
+                        bottom: 0.9vh;
+                        width: 3vw;
+                     
+                    }
+                    .header__burger::before{
+                        width: 3vw;
+                    }
+                    .burger__open{
+                        left: 0;
+                        width: 1vw;
+                  
+                        
+                    }
+                    .burger__open::before{
+                        right: 1.4vw;
+                        width: 4vw ;
+                    }
+                    .burger__open::after{
+                        bottom: 0.4vh;
+                        right: 1.4vw;
+                        width: 4vw ;
+                        
+                    }
+                
+                       
+                
+                }
+                // .header__menu-panel{
+                //     width: 100%;
+                //     height: 50vh;
+                //     bottom: 100vh;
+                //     z-index: 3;
+                //     background: rgba(129, 128, 128, 0.7);
+                //     .social__Media{
+                //         gap: 5.6vw;
+                //         margin-top: 0%;
+                //         padding-top: 1%;
+                //         padding-left: 30%;
+                //         .socialMedia-Instagram{
+                //             width: $SocialMediaIconWidth;
+                //             height: $SocialMediaIconHeight;
+                //         }
+                  
+                //         .socialMedia-Telegram{
+                //             width: $SocialMediaIconWidth;
+                //             height: $SocialMediaIconHeight;
+                //         }
+                 
+                //         .socialMedia-Facebook{
+                //             width: $SocialMediaIconWidth;
+                //             height: $SocialMediaIconHeight;
+                //         }
+                //         .socialMedia-Tiktok{
+                //             width: $SocialMediaIconWidth;
+                //             height: $SocialMediaIconHeight;
+                //         }
+                //     }
+                //     ul{
+                //         margin-top: 5vh;
+                //     }
+                //     li{
+                //         font-size: 3vw;
+                //             height: 7vh;
+                //     }
+
+                   
+                // }
+                // .menu__open{
+                //     bottom: 50vh;
+                
+                // }
+             }
+         
+        
+        }
+
+     
+
+
+
+        .carousel__slider{
+            position: relative;
+            height: 35vh !important;
+            width: 90vw;
+            left: 5vw;
+            bottom: -2vh;
+        }
+        .spacer{
+            display: none;
+        }
+        .content{
+       
+            width: 100vw;
+            clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 70%, 100% 100%, 57% 100%, 18% 100%, 0 100%, 0% 35%, 0 0);
+            padding: 0;
+        
+            right: 0;
+            margin-top: 5vh;
+            z-index: 2;
+            .aboutUs__container{
+                width: 100%;
+
+                h2{
+                    font-size: $fontSizeHeaderContent;
+                    top: 8vh;
+                    left: 6%;
+               
+                }
+                .aboutUs__content{
+                    position: relative;
+                    width: 100%;
+                    height: 55vh;
+                
+                    #imgRightAbout{
+              
+                        right: 4vw;
+                        top: 2vh;
+                        max-width: 44vw;
+                        max-height: 82vh ;
+                    }
+                    #imgLeftAbout{
+                        left: 2vh;
+                        top: 13vh;
+                        max-width: 40vw;
+                        max-height: 56vw ;
+                    }
+                    p{
+                        font-size: $fontSizeTextContent;
+                        left: 6vw;
+                        top: 14vh;
+                        line-height: 3.5vw;
+                    }
+                    a{
+                        left: 45vw;
+                        bottom: 5vh;
+                        font-size: $fontSizeTextContent;
+                
+                    }
+                   
+                }
+                
+            }
+            .map__container{
+                margin-top: 2vh;
+                .location__headerText{
+                    font-size: $fontSizeHeaderContent;
+                }
+                .location__street{
+                    font-size: $fontSizeTextContent;
+                }
+            
+            }
+
+         }
+      
+        .wrapper{
+            width: 100vw;
+        }
+        footer{
+            position: relative;
+            width: 100vw;
+            height: 40vh;
+            right: 0%;
+            h2{
+                font-size: $fontSizeHeaderContent;
+                margin-top: 1vw;
+            }
+            .Contacts{
+               
+                h2{
+                    font-size: $fontSizeHeaderContent;
+                }
+                .contacts__info{
+                    margin-top: 2.85vh;
+                    gap: 6.66vw;
+                    p{
+                        font-size: $fontSizeTextContent;
+                    }
+                }
+             
+            }
+            .social__Media{
+             
+                gap: 8.1vw;
+                .socialMedia-Instagram{
+                    width: $SocialMediaIconWidth;
+                    height: $SocialMediaIconHeight;
+               
+               
+                }
+             
+                .socialMedia-Telegram{
+                    width: $SocialMediaIconWidth;
+                    height: $SocialMediaIconHeight;
+               
+                }
+             
+                .socialMedia-Facebook{
+                    cursor: pointer;
+                    width: $SocialMediaIconWidth;
+                    height: $SocialMediaIconHeight;
+                }
+             
+                .socialMedia-Tiktok{
+                    width: $SocialMediaIconWidth;
+                    height: $SocialMediaIconHeight;
+               
+                }
+             
+        
+            }
+        }
+    }
+}
+
+@mixin view776{
+    @media (max-width: 776px) {
+        
+        .content{
+            .aboutUs__container{
+                .aboutUs__content{
+                    height: 60vh;
+                }
+            }
+        }
+       
+    }
+}
+
+@mixin viev450{
+    @media (max-width: 450px) {
+        $fontSizeHeaderContent: 8vw;
+        $fontSizeTextContent: 3vw;
+        $SocialMediaIconHeight: 3.77vh;
+        $SocialMediaIconWidth: 7.77vw;
+
+
+
+        
+        body.lock{
+         overflow: hidden;
+        }
+
+
+        header{
+            .logo{
+                height: 10vh;
+                width: 26vw;
+            }
+            .language{
+
+                width: 10vw;
+                border: 1px solid #875f91;
+                font-size: 3vw;
+             }
+             .header__wrapper{
+                .header__menu{
+
+
+                    width: 10vw;
+                    max-width: 20vw ;
+                        right: 10vw;
+                    
+              
+                    
+                    .header__burger{
+                  
+                        width: 5vw;
+                     
+                    }
+                    .header__burger::before{
+                        width: 5vw;
+                    }
+             
+                    .burger__open::before{
+                        right: 2.4vw;
+                        width: 6vw ;
+                    }
+                    .burger__open::after{
+                        bottom: 0.5vh;
+                        right: 2.4vw;
+                        width: 6vw ;
+                        
+                    }
+                
+                       
+                
+                }
+                .header__menu-panel{
+                    width: 100%;
+                    height: 100vh;
+                    bottom: 100vh;
+                    z-index: 3;
+                    background: rgba(129, 128, 128, 0.7);
+                    .social__Media{
+                        gap: 17.6vw;
+                        margin-top: 0%;
+                        padding-top: 1%;
+                        padding-left: 4%;
+                        padding-right: 2%;
+                        .socialMedia-Instagram{
+                            width: 10vw;
+                            height: 10vh;
+                        }
+                  
+                        .socialMedia-Telegram{
+                            width: 10vw;
+                            height: 10vh;
+                        }
+                 
+                        .socialMedia-Facebook{
+                            width: 10vw;
+                            height: 10vh;
+                        }
+                        .socialMedia-Tiktok{
+                            width: 10vw;
+                            height: 10vh;
+                        }
+                    }
+                    ul{
+                        margin-top: 10vh;
+                    }
+                    li{
+                        font-size: 10vw;
+                            height: 15vh;
+                    }
+    
+                   
+                }
+                .menu__open{
+                    bottom: 0vh;
+                    overflow: hidden;
+                
+                }
+             
+             }
+         
+        
+        }
+
+
+        .content{
+       
+            width: 100vw;
+            clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 70%, 100% 100%, 57% 100%, 18% 100%, 0 100%, 0% 35%, 0 0);
+            padding: 0;
+        
+            right: 0;
+            margin-top: 5vh;
+            z-index: 2;
+        
+            .aboutUs__container{
+                width: 100%;
+
+                h2{
+                    font-size: $fontSizeHeaderContent;
+                    top: 8vh;
+                    left: 8%;
+               
+                }
+                .aboutUs__content{
+                    position: relative;
+                    width: 100%;
+                    height: 40.5vh;
+                
+              
+                    #imgLeftAbout{
+                        left: 2vh;
+                        top: 10vh;
+                        max-width: 43vw;
+                        max-height: 58vw ;
+                    }
+                    p{
+                        font-size: $fontSizeTextContent;
+                        left: 6vw;
+                        top: 10vh;
+                        line-height: 4vw;
+                    }
+                    a{
+                        left: 5vw;
+                        bottom: 0vh;
+                        font-size: 5vw;
+                
+                    }
+                   
+                }
+                
+            }
+            .map__container{
+                margin-top: 2vh;
+                .location__headerText{
+                    font-size: $fontSizeHeaderContent;
+                }
+                .location__street{
+                    font-size: $fontSizeTextContent;
+                }
+            
+            }
+
+         }
+
+
+         footer{
+            position: relative;
+            width: 100vw;
+            height: 40vh;
+            right: 0%;
+            h2{
+                font-size: $fontSizeHeaderContent;
+                margin-top: 1vw;
+            }
+            .Contacts{
+               
+                h2{
+                    font-size: $fontSizeHeaderContent;
+                }
+                .contacts__info{
+                    margin-top: 2.85vh;
+                    margin-bottom: 2vh;
+                    gap: 6.66vw;
+                    p{
+                        font-size: $fontSizeTextContent;
+                    }
+                }
+             
+            }
+            .social__Media{
+             
+                gap: 9.1vw;
+                .socialMedia-Instagram{
+                    width: $SocialMediaIconWidth;
+                    height: $SocialMediaIconHeight;
+               
+               
+                }
+             
+                .socialMedia-Telegram{
+                    width: $SocialMediaIconWidth;
+                    height: $SocialMediaIconHeight;
+               
+                }
+             
+                .socialMedia-Facebook{
+                    cursor: pointer;
+                    width: $SocialMediaIconWidth;
+                    height: $SocialMediaIconHeight;
+                }
+             
+                .socialMedia-Tiktok{
+                    width: $SocialMediaIconWidth;
+                    height: $SocialMediaIconHeight;
+               
+                }
+             
+        
+            }
         }
     }
 }

@@ -9,8 +9,10 @@ function menuBurger(){
             console.log("click")
             menu.classList.toggle("menu__open");
             burger.classList.toggle("burger__open");
+            burger.classList.toggle("header__burger")
             document.querySelector(".open").classList.toggle("btn__active");
             document.querySelector(".close").classList.toggle("btn__active");
+            document.querySelector("body").classList.toggle("lock");
 
         });
     })

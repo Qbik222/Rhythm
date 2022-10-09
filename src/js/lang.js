@@ -25,10 +25,22 @@ const langArr = {
         "en": "Сontests"
     },
     "aboutUs__text":{
-        "ua": `«Ритм» - школа сучасного та класичного танцю для дітей
-         Програма школи побудована за принципом танцювальної академії`,
-         "en": `Rhythm is a modern and classical dance school for children. The 
-         program of the school is built on the principle of a dance academy.`
+        "ua": `«Rhythm dance school» - школа сучасного та класичного танцю
+                для дітей. Програма школи побудована за принципом танцювальної академії 
+                і передбачає навчання сучасній хореографії через опанування гімнастики , 
+                класичного танцю,  напрацювання техніки, розвитку пластики, 
+                гнучкості, уміння імпровізувати та створювати етюди.
+                Головна мета школи – запалили  любов до танцю через відчуття себе 
+                та свого тіла в просторі,
+                а також допомогти дітям зробити перші кроки у чудовій професії танцівника.`,
+        
+        "en": `«Rhythm dance school» - a school of modern and classical dance
+                for children. The school program is based on the principle of a dance academy
+                and involves learning modern choreography through mastering gymnastics,
+                classical dance, development of technique, development of plasticity,
+                flexibility, the ability to improvise and create sketches.
+                The main goal of the school is to ignite a love for dance through a sense of self
+                and his body in space`
 
     },
     "readMore__btn":{
