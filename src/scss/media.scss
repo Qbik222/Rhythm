@@ -170,6 +170,7 @@
                     bottom: 50vh;
                 
                 }
+              
              }
          
         
@@ -450,7 +451,7 @@
                 .aboutUs__content{
                     position: relative;
                     width: 100%;
-                    height: 55vh;
+                    height: 55vw;
                 
                     #imgRightAbout{
               
@@ -463,7 +464,7 @@
                         left: 2vh;
                         top: 13vh;
                         max-width: 40vw;
-                        max-height: 56vw ;
+                        max-height: 56vh ;
                     }
                     p{
                         font-size: $fontSizeTextContent;
@@ -568,8 +569,9 @@
     }
 }
 
-@mixin viev450{
+@mixin view450{
     @media (max-width: 450px) {
+    
         $fontSizeHeaderContent: 8vw;
         $fontSizeTextContent: 3vw;
         $SocialMediaIconHeight: 3.77vh;
@@ -796,5 +798,54 @@
         
             }
         }
+    }
+
+}
+@mixin view380{
+    @media (max-width: 380px) {
+
+      .content{
+        .aboutUs__container{
+            .aboutUs__content{
+                height: 46vh;
+            }
+        }
+      }
+      header{
+        .header__wrapper{
+            .language{
+                height: 5vh;
+                width: 11vw;
+            }
+            .header__menu{
+                height: 5vh;
+            }
+        }
+      }
+       
+    }
+    
+   
+}
+@mixin view330 {
+    @media (max-width: 330px) {
+
+        .content{
+            .aboutUs__container{
+                .aboutUs__content{
+                    height: 53vh;
+                }
+            }
+          }
+        header{
+            .header__wrapper{
+                .language{
+                    height: 6vh;
+                }
+                .header__menu{
+                    height: 6vh;
+                }
+            }
+          }      
     }
 }

@@ -66,12 +66,12 @@ header{
             
         .header__menu:hover{
             .header__burger{
-                margin-top: 8px;
-                padding-top: 7px;
+                margin-top: 0.7vh;
+                padding-top: 0.7vh;
             }
             .header__burger::before{
-                left: 5px;
-                margin-bottom: 7px;
+                left: 0.5vh;
+                margin-bottom: 0.7vh;
             }
         }
     
@@ -581,8 +581,8 @@ header{
     }
     a{
         position: absolute;
-        left: 29vw;
-        bottom: 7.5vh;
+        left: 10vw;
+        bottom: 0vh;
         font-size: $fontSizeTextContent;
 
     }
@@ -739,4 +739,6 @@ footer{
 @include view1024;
 @include view867;
 @include view776;
-@include viev450;
+@include view450;
+@include view380;
+@include view330;
