@@ -1,5 +1,5 @@
 function asideShow(content){
-    const modal = document.querySelector(".modal");
+    const modal = document.querySelector(".aside");
  
 
 
@@ -8,11 +8,11 @@ function asideShow(content){
         let contentPosition = content.getBoundingClientRect().y;
       
         if (contentPosition <= 0){
-            modal.classList.add("modal__active")  
+            modal.classList.add("aside__active")  
             
         }
         if(contentPosition > 0){
-            modal.classList.remove("modal__active")  
+            modal.classList.remove("aside__active")  
         }
         
     }

@@ -1,7 +1,7 @@
 
 function formValidate(){
     const form = document.querySelector("form");
-    const aside = document.querySelector(".modal");
+    const aside = document.querySelector(".aside");
     form.addEventListener("submit", formSend);
 
   async function formSend(e) {

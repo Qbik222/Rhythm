@@ -406,7 +406,7 @@ header .language {
   opacity: 0;
 }
 
-.modal::after {
+.aside::after {
   content: "";
   position: absolute;
   top: 0;
@@ -419,30 +419,30 @@ header .language {
   transition: all 0.5s ease 0s;
 }
 
-.modal._sending::after {
+.aside._sending::after {
   opacity: 1;
   visibility: visible;
 }
 
-.modal {
+.aside {
   display: flex;
   position: fixed;
   flex-direction: column;
   justify-content: center;
-  padding-top: 45vh;
+  padding-top: 44vh;
   padding-left: 1vw;
   top: 0;
   width: 33.4vw;
   height: 100vh;
   background: url("../img/asideBG.jpg") no-repeat;
-  background-size: 130%;
+  background-size: 135%;
   font-size: 1vw;
   z-index: -1;
   opacity: 0;
   transition: all 0.8s;
   left: 100%;
 }
-.modal form {
+.aside form {
   position: relative;
   width: 100%;
   display: flex;
@@ -451,7 +451,7 @@ header .language {
   margin-left: 2%;
   gap: 1vh;
 }
-.modal form .form__title {
+.aside form .form__title {
   margin-bottom: 10px;
   font-size: 2vw;
   color: black;
@@ -460,12 +460,12 @@ header .language {
   padding: 0;
   margin-left: 4.5%;
 }
-.modal form .form__item {
+.aside form .form__item {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-.modal form .form__item .about {
+.aside form .form__item .about {
   width: 300px;
   max-height: 140px;
   font-size: 1.2vw;
@@ -474,14 +474,14 @@ header .language {
   background: rgba(255, 255, 255, 0.95);
   font-size: 15px;
 }
-.modal form .form__item label {
+.aside form .form__item label {
   display: flex;
   justify-content: space-between;
   margin: 10px 0;
   color: rgb(0, 0, 0);
   text-shadow: 0 0 20px white;
 }
-.modal form .form__item input {
+.aside form .form__item input {
   width: 15.7vw;
   height: 2.7vh;
   font-size: 1vw;
@@ -492,38 +492,38 @@ header .language {
   margin: 0;
   padding: 5px;
 }
-.modal form .form__item .form__input._error {
+.aside form .form__item .form__input._error {
   box-shadow: 0 0 15px red;
 }
-.modal form .form__item .checkbox__input._error {
+.aside form .form__item .checkbox__input._error {
   box-shadow: 0 0 15px red;
 }
-.modal form .form__item textarea:focus, .modal form .form__item input:focus {
+.aside form .form__item textarea:focus, .aside form .form__item input:focus {
   outline: 2px solid #d187aa;
 }
-.modal form .form__item input::-webkit-outer-spin-button,
-.modal form .form__item input::-webkit-inner-spin-button {
+.aside form .form__item input::-webkit-outer-spin-button,
+.aside form .form__item input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.modal form .form__item input[type=number] {
+.aside form .form__item input[type=number] {
   -moz-appearance: textfield;
 }
-.modal form .form__item .checkbox {
+.aside form .form__item .checkbox {
   display: flex;
   align-items: center;
   gap: 1vw;
   cursor: pointer;
 }
-.modal form .form__item .checkbox .checkbox__input {
+.aside form .form__item .checkbox .checkbox__input {
   width: 2vw;
   cursor: pointer;
 }
-.modal form .form__item .checkbox .checkbox__input:focus {
+.aside form .form__item .checkbox .checkbox__input:focus {
   outline: none;
   border: none;
 }
-.modal form .form__item .form__button {
+.aside form .form__item .form__button {
   position: absolute;
   width: 8.9vw;
   height: 3.7vh;
@@ -535,23 +535,23 @@ header .language {
   font-size: 1.1vw;
   font-family: BarlowBold;
 }
-.modal form .form__item .form__button:hover {
+.aside form .form__item .form__button:hover {
   background: rgba(209, 135, 170, 0.7);
   bottom: 2.5%;
   left: 39.5%;
 }
-.modal form .form__item .form__button:active {
+.aside form .form__item .form__button:active {
   background: rgba(209, 135, 170, 0.7);
   bottom: 2%;
   left: 40%;
 }
-.modal textarea.about {
+.aside textarea.about {
   min-height: 5.4vh;
   max-width: 15.7vw;
   resize: vertical;
 }
 
-.modal__active {
+.aside__active {
   opacity: 1;
   z-index: 4 !important;
   left: 66.7%;
@@ -561,47 +561,52 @@ header .language {
   width: 100%;
 }
 
+.aboutUs__container {
+  height: 70vh;
+}
 .aboutUs__container h2 {
-  position: relative;
-  top: 10vh;
-  left: 13vw;
+  text-align: center;
   font-size: 2.2vw;
   width: 50%;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
 }
-
-.aboutUs__content {
+.aboutUs__container .aboutUs__content {
   display: flex;
   position: relative;
+  flex-direction: column;
   width: 60vw;
-  height: 65vh;
+  height: 75%;
+  flex-direction: row;
 }
-.aboutUs__content #imgRightAbout {
-  display: none;
-  position: absolute;
-  right: 2vw;
-  top: 2vh;
-  max-width: 26vw;
-  max-height: 46vh;
-}
-.aboutUs__content #imgLeftAbout {
+.aboutUs__container .aboutUs__content .aboutUs__imgContent {
   position: relative;
-  left: 10vh;
-  top: 13vh;
-  max-width: 26vw;
-  max-height: 46vh;
+  display: flex;
+  width: 100%;
+  height: 95%;
+  justify-content: space-around;
+  top: 0;
+  left: 0;
 }
-.aboutUs__content p {
+.aboutUs__container .aboutUs__content .aboutUs__imgContent #imgLeftAbout {
+  position: relative;
+  left: 0;
+  top: 0;
+  max-width: 50%;
+  max-height: 100%;
+}
+.aboutUs__container .aboutUs__content .aboutUs__imgContent p {
   position: relative;
   font-size: 1.3vw;
   width: 45%;
-  left: 7vw;
-  top: 15vh;
+  height: 100%;
+  left: 0;
+  top: 0;
   line-height: 2.1vw;
 }
-.aboutUs__content a {
-  position: absolute;
-  left: 10vw;
-  bottom: 0vh;
+.aboutUs__container a {
+  position: relative;
+  left: 15%;
   font-size: 1.3vw;
 }
 
@@ -729,64 +734,39 @@ footer .social__Media .socialMedia-Tiktok:hover {
 }
 
 @media (max-width: 1620px) {
-  .aboutUs__content p {
-    bottom: 20%;
+  header .header__wrapper .language {
+    width: 3.5vw;
+    height: 4.5vh;
   }
-  .aboutUs__content a {
-    bottom: 15%;
+  header .header__wrapper .header__menu {
+    height: 4.5vh;
   }
-}
-@media (max-width: 1375px) {
-  .burger__open::before {
-    top: 0.1vh;
-    border: 0.5px solid white !important;
+  .aside form {
+    gap: 0;
+    margin: 0;
   }
-  .burger__open::after {
-    border: 0.5px solid white !important;
+  .aside form .form__item .form__button {
+    top: 93%;
   }
-  footer {
-    right: 12.6%;
+  .aboutUs__container {
+    height: 70vh;
   }
   .aboutUs__content {
-    height: 50vh;
-  }
-  .aboutUs__content #imgRightAbout {
-    right: 4vw;
-    top: 2vh;
-    max-width: 24vw;
-    max-height: 42vh;
-  }
-  .aboutUs__content #imgLeftAbout {
-    left: 5vh;
-    top: 13vh;
-    max-width: 20vw;
-    max-height: 40vh;
-  }
-  .aboutUs__content p {
-    top: 9vh;
-    left: 6vw;
-    font-size: 1.5vw;
-  }
-  .aboutUs__content a {
-    bottom: -7vh;
-    left: 25vw;
-  }
-  .modal {
-    height: 100%;
+    height: 90%;
   }
 }
 @media (max-width: 1440px) {
-  .modal {
+  .aside {
     background: url("../img/asideBG900px.jpg") no-repeat;
     background-size: 100%;
   }
 }
 @media (max-width: 1030px) {
-  header .logo {
+  header .header__wrapper .logo {
     height: 14vh;
     width: 13vw;
   }
-  header .language {
+  header .header__wrapper .language {
     width: 4.5vw;
     border: 1px solid #875f91;
     font-size: 1.2vw;
@@ -823,7 +803,6 @@ footer .social__Media .socialMedia-Tiktok:hover {
   header .header__wrapper .header__menu-panel {
     width: 100%;
     height: 50vh;
-    bottom: 100vh;
     z-index: 3;
     background: rgba(129, 128, 128, 0.7);
   }
@@ -876,38 +855,29 @@ footer .social__Media .socialMedia-Tiktok:hover {
   }
   .content .aboutUs__container {
     width: 100%;
+    height: 70vh;
   }
   .content .aboutUs__container h2 {
     font-size: 4.5vw;
-    top: 8vh;
-    left: 5%;
   }
   .content .aboutUs__container .aboutUs__content {
     position: relative;
     width: 100%;
-    height: 70vh;
-  }
-  .content .aboutUs__container .aboutUs__content #imgRightAbout {
-    right: 4vw;
-    top: 2vh;
-    max-width: 44vw;
-    max-height: 82vh;
   }
   .content .aboutUs__container .aboutUs__content #imgLeftAbout {
-    left: 5vh;
-    top: 13vh;
-    max-width: 36vw;
-    max-height: 56vh;
+    left: 0;
+    top: 0;
+    width: 40%;
+    height: 100%;
   }
   .content .aboutUs__container .aboutUs__content p {
     font-size: 2vw;
-    left: 7vw;
-    top: 15vh;
-    line-height: 3.5vw;
+    width: 45%;
+    line-height: 3vw;
   }
-  .content .aboutUs__container .aboutUs__content a {
-    left: 42vw;
-    bottom: 1vh;
+  .content .aboutUs__container a {
+    left: 15%;
+    bottom: 0vh;
     font-size: 2vw;
   }
   .content .map__container .location__headerText {
@@ -916,11 +886,58 @@ footer .social__Media .socialMedia-Tiktok:hover {
   .content .map__container .location__street {
     font-size: 2vw;
   }
-  .modal {
-    display: none;
+  .aside {
+    position: relative;
+    display: block;
+    left: 0;
+    opacity: 1;
+    z-index: 4;
+    padding: 0;
+    width: 100vw;
+    background: #d187aa;
+    height: 100vh;
   }
-  .modal form {
-    display: none;
+  .aside form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+  .aside form .form__title {
+    text-align: center;
+    width: 40%;
+    margin: 0;
+    font-size: 3vw;
+  }
+  .aside form .form__item {
+    padding: 1vh;
+    flex-direction: column;
+    width: 35%;
+    height: 25%;
+  }
+  .aside form .form__item .form__input {
+    width: 100%;
+    height: 50%;
+    font-size: 1.5vw;
+  }
+  .aside form .form__item .form__label {
+    font-size: 2vw;
+  }
+  .aside form .form__item textarea.about {
+    width: 100%;
+    max-width: 100%;
+  }
+  .aside form .form__item:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 20%;
+    width: 60%;
+  }
+  .aside form .form__item:last-child .form__button {
+    position: relative;
+    top: 0;
+    left: 39%;
   }
   footer {
     width: 100vw;
@@ -965,24 +982,26 @@ footer .social__Media .socialMedia-Tiktok:hover {
   body {
     overflow-x: hidden !important;
   }
-  header .logo {
-    height: 9vh;
+  header .header__wrapper .logo {
+    height: 7vh;
     width: 16vw;
   }
-  header .language {
+  header .header__wrapper .language {
     width: 5.5vw;
+    height: 3vh;
     border: 1px solid #875f91;
     font-size: 2vw;
   }
   header .header__wrapper .header__menu {
     border: 1px solid #875f91;
     width: 8vw;
+    height: 3vh;
   }
   header .header__wrapper .header__menu .btn__active {
     display: none;
   }
   header .header__wrapper .header__menu .header__burger {
-    bottom: 0.9vh;
+    bottom: 0.7vh;
     width: 3vw;
   }
   header .header__wrapper .header__menu .header__burger::before {
@@ -1021,38 +1040,22 @@ footer .social__Media .socialMedia-Tiktok:hover {
   }
   .content .aboutUs__container {
     width: 100%;
+    height: 50vh;
   }
   .content .aboutUs__container h2 {
     font-size: 5vw;
-    top: 8vh;
-    left: 6%;
   }
   .content .aboutUs__container .aboutUs__content {
-    position: relative;
     width: 100%;
-    height: 60vh;
-  }
-  .content .aboutUs__container .aboutUs__content #imgRightAbout {
-    right: 4vw;
-    top: 2vh;
-    max-width: 44vw;
-    max-height: 82vh;
-  }
-  .content .aboutUs__container .aboutUs__content #imgLeftAbout {
-    left: 2vh;
-    top: 13vh;
-    max-width: 40vw;
-    max-height: 56vw;
+    height: 65%;
   }
   .content .aboutUs__container .aboutUs__content p {
     font-size: 2.5vw;
-    left: 6vw;
-    top: 14vh;
     line-height: 3.5vw;
   }
   .content .aboutUs__container .aboutUs__content a {
-    left: 45vw;
-    top: 50vh;
+    left: 10%;
+    bottom: 0;
     font-size: 2.5vw;
   }
   .content .map__container {
@@ -1064,8 +1067,24 @@ footer .social__Media .socialMedia-Tiktok:hover {
   .content .map__container .location__street {
     font-size: 2.5vw;
   }
-  .wrapper {
-    width: 100vw;
+  .aside {
+    height: 60vh;
+  }
+  .aside form .form__title {
+    font-size: 5vw;
+    width: 100%;
+  }
+  .aside form .form__item .form__label {
+    font-size: 3vw;
+  }
+  .aside form .form__item:last-child {
+    width: 100%;
+    align-items: center;
+  }
+  .aside form .form__item:last-child .form__button {
+    left: 0;
+    width: 15%;
+    font-size: 2vw;
   }
   footer {
     position: relative;
@@ -1108,20 +1127,15 @@ footer .social__Media .socialMedia-Tiktok:hover {
     height: 7.77vh;
   }
 }
-@media (max-width: 776px) {
-  .content .aboutUs__container .aboutUs__content {
-    height: 60vh;
-  }
-}
-@media (max-width: 450px) {
+@media (max-width: 485px) {
   body.lock {
     overflow: hidden;
   }
-  header .logo {
+  header .header__wrapper .logo {
     height: 10vh;
     width: 26vw;
   }
-  header .language {
+  header .header__wrapper .language {
     width: 10vw;
     border: 1px solid #875f91;
     font-size: 3vw;
@@ -1148,13 +1162,12 @@ footer .social__Media .socialMedia-Tiktok:hover {
   }
   header .header__wrapper .header__menu-panel {
     width: 100%;
-    height: 100vh;
-    bottom: 100vh;
+    height: 100%;
     z-index: 3;
     background: rgba(129, 128, 128, 0.7);
   }
   header .header__wrapper .header__menu-panel .social__Media {
-    gap: 17.6vw;
+    gap: 16.6vw;
     margin-top: 0%;
     padding-top: 1%;
     padding-left: 4%;
@@ -1181,7 +1194,7 @@ footer .social__Media .socialMedia-Tiktok:hover {
   }
   header .header__wrapper .header__menu-panel li {
     font-size: 10vw;
-    height: 15vh;
+    height: 14vh;
   }
   header .header__wrapper .menu__open {
     bottom: 0vh;
@@ -1197,33 +1210,22 @@ footer .social__Media .socialMedia-Tiktok:hover {
   }
   .content .aboutUs__container {
     width: 100%;
+    height: 45vh;
   }
   .content .aboutUs__container h2 {
     font-size: 8vw;
-    top: 8vh;
-    left: 8%;
   }
   .content .aboutUs__container .aboutUs__content {
     position: relative;
     width: 100%;
-    height: 55vh;
+    height: 60%;
   }
-  .content .aboutUs__container .aboutUs__content #imgLeftAbout {
-    left: 2vh;
-    top: 10vh;
-    max-width: 43vw;
-    max-height: 58vw;
-  }
-  .content .aboutUs__container .aboutUs__content p {
+  .content .aboutUs__container .aboutUs__content .aboutUs__imgContent p {
     font-size: 3vw;
-    left: 6vw;
-    top: 10vh;
-    line-height: 4vw;
   }
-  .content .aboutUs__container .aboutUs__content a {
-    left: 5vw;
-    top: 40vh;
-    font-size: 5vw;
+  .content .aboutUs__container a {
+    left: 10%;
+    font-size: 4vw;
   }
   .content .map__container {
     margin-top: 2vh;
@@ -1233,6 +1235,25 @@ footer .social__Media .socialMedia-Tiktok:hover {
   }
   .content .map__container .location__street {
     font-size: 3vw;
+  }
+  .aside {
+    height: 63vh;
+  }
+  .aside form .form__item {
+    width: 70%;
+  }
+  .aside form .form__item .form__label {
+    font-size: 3.4vw;
+  }
+  .aside form .form__item .form__input {
+    font-size: 3vw;
+  }
+  .aside form .form__item:last-child {
+    width: 100%;
+  }
+  .aside form .form__item:last-child .checkbox .checkbox__input {
+    width: 15px;
+    height: 15px;
   }
   footer {
     position: relative;
@@ -1277,12 +1298,6 @@ footer .social__Media .socialMedia-Tiktok:hover {
   }
 }
 @media (max-width: 390px) {
-  .content .aboutUs__container .aboutUs__content {
-    height: 50vh;
-  }
-  .content .aboutUs__container .aboutUs__content a {
-    top: 39vh;
-  }
   header .header__wrapper .language {
     height: 5vh;
     width: 11vw;
@@ -1290,15 +1305,43 @@ footer .social__Media .socialMedia-Tiktok:hover {
   header .header__wrapper .header__menu {
     height: 5vh;
   }
+  header .header__wrapper .header__menu .header__burger {
+    bottom: 1.2vh;
+  }
 }
 @media (max-width: 330px) {
-  .content .aboutUs__container .aboutUs__content {
-    height: 53vh;
+  .content {
+    width: 100vw;
+  }
+  .content .aboutUs__container {
+    height: 55vh;
+  }
+  .content .aboutUs__container .aboutUs__imgContent p {
+    width: 45%;
+  }
+  .map__container h2 {
+    width: 100%;
+    text-align: center;
   }
   header .header__wrapper .language {
     height: 6vh;
   }
   header .header__wrapper .header__menu {
     height: 6vh;
+  }
+  .aside {
+    height: 80vh;
+  }
+  footer {
+    height: 30vh;
+  }
+  footer .Contacts h2 {
+    font-size: 5vw;
+  }
+  footer .Contacts p {
+    font-size: 3vw;
+  }
+  footer h2 {
+    font-size: 5vw;
   }
 }

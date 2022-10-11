@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () =>{
     menuBurger();
     asideShow(content);
     stickSlider();
-    hideLogo();
+    hideLogo(content);
     mapApi();
     formValidate();
     changeLanguage(langArr);

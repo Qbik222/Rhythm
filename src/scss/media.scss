@@ -1,20 +1,45 @@
 
 @mixin view1600{
     @media(max-width: 1620px){
+
+
+        header{
+            .header__wrapper{
+                .language{
+                    width: 3.5vw;
+                    height: 4.5vh;
+                }
+                .header__menu{
+                    height:4.5vh;
+                }
+            }
+         
+        }
+        .aside{
+           form{
+            gap: 0;
+            margin: 0;
+            .form__item{
+                .form__button{
+                    top: 93%;
+                }
+            }
+      
+           } 
+        }
+        .aboutUs__container{
+            height: 70vh;
+        }
         .aboutUs__content{
-            p{
-                bottom: 20%;
-            }
-            a{
-                bottom: 15%;
-            }
+            height: 90%;
+
         }
     }
 }
 
  @mixin view1440 {
     @media (max-width: 1440px) {
-     .modal{
+     .aside{
         background: url("../img/asideBG900px.jpg") no-repeat ;
         background-size: 100%;
    
@@ -23,55 +48,6 @@
     }
     
  }
-@mixin view1366 {
-    @media(max-width: 1375px){
-        $fontSizeHeaderContent: 3vw;
-        $fontSizeTextContent: 1.5vw;
-        .burger__open::before{
-            top:  0.1vh;
-            border: 0.5px solid white !important;
-        }
-        .burger__open::after{
-            
-            border: 0.5px solid white !important;
-        }
-
-        footer{
-            right: 12.6%;
-        }
-        .aboutUs__content{
-            height: 50vh;
-            #imgRightAbout{
-              
-                right: 4vw;
-                top: 2vh;
-                max-width: 24vw;
-                max-height: 42vh ;
-            }
-            #imgLeftAbout{
-                left: 5vh;
-                top: 13vh;
-                max-width: 20vw;
-                max-height: 40vh ;
-            }
-            p{
-                top: 9vh;
-                left: 6vw;
-                font-size: $fontSizeTextContent;
-            }
-            a{
-                bottom: -7vh;
-                left: 25vw;
-            }
-        }
-        .modal{
-            height: 100%;
-           
-          
-        }
- 
-    }
-}
 @mixin view1024{
     @media (max-width: 1030px) {
         $fontSizeHeaderContent: 4.5vw;
@@ -79,16 +55,17 @@
         $SocialMediaIconHeight: 7.77vh;
         $SocialMediaIconWidth: 4.77vw;
         header{
-            .logo{
-                height: 14vh;
-                width: 13vw;
-            }
-            .language{
-                width: 4.5vw;
-                border: 1px solid #875f91;
-                font-size: 1.2vw;
-             }
+       
              .header__wrapper{
+                .logo{
+                    height: 14vh;
+                    width: 13vw;
+                }
+                .language{
+                    width: 4.5vw;
+                    border: 1px solid #875f91;
+                    font-size: 1.2vw;
+                 }
 
                 .header__menu{
                     border: 1px solid #875f91;
@@ -129,7 +106,7 @@
                 .header__menu-panel{
                     width: 100%;
                     height: 50vh;
-                    bottom: 100vh;
+                    // bottom: 100vh;
                     z-index: 3;
                     background: rgba(129, 128, 128, 0.7);
                     .social__Media{
@@ -193,44 +170,43 @@
 
             .aboutUs__container{
                 width: 100%;
+                height: 70vh;
 
                 h2{
                     font-size: $fontSizeHeaderContent;
-                    top: 8vh;
-                    left: 5%;
+                    // top: 8vh;
+                    // left: 5%;
                
                 }
                 .aboutUs__content{
                     position: relative;
                     width: 100%;
-                    height: 70vh;
-                
-                    #imgRightAbout{
+
               
-                        right: 4vw;
-                        top: 2vh;
-                        max-width: 44vw;
-                        max-height: 82vh ;
-                    }
+                
+                 
+              
                     #imgLeftAbout{
-                        left: 5vh;
-                        top: 13vh;
-                        max-width: 36vw;
-                        max-height: 56vh ;
+                        left: 0;
+                        top: 0;
+                        width: 40%;
+                        height: 100% ;
                     }
                     p{
+                        
                         font-size: $fontSizeTextContent;
-                        left: 7vw ;
-                        top: 15vh;
-                        line-height: 3.5vw;
+                        width: 45%;
+                        line-height: 3vw;
                     }
-                    a{
-                        left: 42vw;
-                        bottom: 1vh;
-                        font-size: $fontSizeTextContent;
-                
-                    }
+         
                    
+                }
+                a{
+                  
+                    left: 15%;
+                    bottom: 0vh;
+                    font-size: $fontSizeTextContent;
+            
                 }
                 
             }
@@ -246,10 +222,62 @@
             }
 
          }
-        .modal{
-            display: none;
+        .aside{
+            position: relative;
+            display: block;
+            left: 0;
+            opacity: 1;
+            z-index: 4;
+            padding: 0;
+            width: 100vw;
+            background: #d187aa;
+            height: 100vh;
+
             form{
-                display: none;
+                display: flex;  
+                flex-direction: column;
+                align-items: center;
+                height: 100%;
+                .form__title{
+                   text-align: center;
+                   width:40%;
+                   margin: 0;
+                   font-size: 3vw;
+                }
+                .form__item{
+                    padding: 1vh;
+                    flex-direction: column;
+                    width: 35%;
+                    height: 25%;
+                    .form__input{
+                        width: 100%;
+                        height: 50%;
+                        font-size: 1.5vw;
+                    }
+                    .form__label{
+                        font-size: 2vw;
+                    }
+                    textarea.about{
+                        width: 100%;
+                        max-width: 100%;
+                    }
+                }
+                .form__item:last-child{
+              
+                    display: flex;
+                    flex-direction: column;
+             
+                    justify-content: center;
+                    height: 20%;
+                    width: 60%;
+                    .form__button{
+                        position: relative;
+                        top: 0;
+                        left: 39%;
+                        
+                    }
+                }
+
             }
         }
         footer{
@@ -320,27 +348,32 @@
             overflow-x: hidden !important;
         }
         header{
-            .logo{
-                height: 9vh;
-                width: 16vw;
-            }
-            .language{
-                width: 5.5vw;
-                border: 1px solid #875f91;
-                font-size: 2vw;
-             }
+    
+       
+      
              .header__wrapper{
+                .logo{
+                    height: 7vh;
+                    width: 16vw;
+                }
+                .language{
+                    width: 5.5vw;
+                    height: 3vh;
+                    border: 1px solid #875f91;
+                    font-size: 2vw;
+                 }
 
                 .header__menu{
                     border: 1px solid #875f91;
                     width: 8vw;
+                    height: 3vh;
                     
                     .btn__active{
                         display: none;
                     }
                     
                     .header__burger{
-                        bottom: 0.9vh;
+                        bottom: 0.7vh;
                         width: 3vw;
                      
                     }
@@ -441,40 +474,27 @@
             z-index: 2;
             .aboutUs__container{
                 width: 100%;
+                height: 50vh;
 
                 h2{
                     font-size: $fontSizeHeaderContent;
-                    top: 8vh;
-                    left: 6%;
+              
                
                 }
                 .aboutUs__content{
-                    position: relative;
+            
                     width: 100%;
-                    height: 60vh;
-                
-                    #imgRightAbout{
-              
-                        right: 4vw;
-                        top: 2vh;
-                        max-width: 44vw;
-                        max-height: 82vh ;
-                    }
-                    #imgLeftAbout{
-                        left: 2vh;
-                        top: 13vh;
-                        max-width: 40vw;
-                        max-height: 56vw ;
-                    }
+                    height: 65%;
+                    
+           
                     p{
                         font-size: $fontSizeTextContent;
-                        left: 6vw;
-                        top: 14vh;
+                    
                         line-height: 3.5vw;
                     }
                     a{
-                        left: 45vw;
-                        top: 50vh;
+                        left: 10%;
+                        bottom: 0;
                         font-size: $fontSizeTextContent;
                 
                     }
@@ -492,12 +512,36 @@
                 }
             
             }
+         
 
          }
-      
-        .wrapper{
-            width: 100vw;
+         .aside{
+            height: 60vh;
+            
+            form{
+                .form__title{
+                    font-size: 5vw;
+                    width: 100%;
+                }
+                .form__item{
+                    .form__label{
+                        font-size: 3vw;
+                    }
+                }
+                .form__item:last-child{
+                    width: 100%;
+                    align-items: center;
+                    .form__button{
+                        left: 0;
+                        width: 15%;
+                        font-size: 2vw;
+                    }
+                }
+            }
         }
+  
+         
+  
         footer{
             position: relative;
             width: 100vw;
@@ -552,25 +596,28 @@
         
             }
         }
+      
     }
+
 }
 
-@mixin view776{
-    @media (max-width: 776px) {
+// @mixin view776{
+//     @media (max-width: 776px) {
         
-        .content{
-            .aboutUs__container{
-                .aboutUs__content{
-                    height: 60vh;
-                }
-            }
-        }
+//         .content{
+//             .aboutUs__container{
+//                 height: 60vh;
+//                 .aboutUs__content{
+//                     height: 100%;
+//                 }
+//             }
+//         }
        
-    }
-}
+//     }
+// }
 
-@mixin view450{
-    @media (max-width: 450px) {
+@mixin view485{
+    @media (max-width: 485px) {
     
         $fontSizeHeaderContent: 8vw;
         $fontSizeTextContent: 3vw;
@@ -586,17 +633,18 @@
 
 
         header{
-            .logo{
-                height: 10vh;
-                width: 26vw;
-            }
-            .language{
-
-                width: 10vw;
-                border: 1px solid #875f91;
-                font-size: 3vw;
-             }
+    
              .header__wrapper{
+                .logo{
+                    height: 10vh;
+                    width: 26vw;
+                }
+                .language{
+    
+                    width: 10vw;
+                    border: 1px solid #875f91;
+                    font-size: 3vw;
+                 }
                 .header__menu{
 
 
@@ -631,12 +679,13 @@
                 }
                 .header__menu-panel{
                     width: 100%;
-                    height: 100vh;
-                    bottom: 100vh;
+                    height: 100%;
+                    
+             
                     z-index: 3;
                     background: rgba(129, 128, 128, 0.7);
                     .social__Media{
-                        gap: 17.6vw;
+                        gap: 16.6vw;
                         margin-top: 0%;
                         padding-top: 1%;
                         padding-left: 4%;
@@ -665,7 +714,7 @@
                     }
                     li{
                         font-size: 10vw;
-                            height: 15vh;
+                            height: 14vh;
                     }
     
                    
@@ -693,38 +742,29 @@
         
             .aboutUs__container{
                 width: 100%;
+                height: 45vh;
 
                 h2{
                     font-size: $fontSizeHeaderContent;
-                    top: 8vh;
-                    left: 8%;
                
                 }
                 .aboutUs__content{
                     position: relative;
                     width: 100%;
-                    height: 55vh;
+                    height: 60%;
                 
               
-                    #imgLeftAbout{
-                        left: 2vh;
-                        top: 10vh;
-                        max-width: 43vw;
-                        max-height: 58vw ;
-                    }
+                  .aboutUs__imgContent{
                     p{
                         font-size: $fontSizeTextContent;
-                        left: 6vw;
-                        top: 10vh;
-                        line-height: 4vw;
+                  
                     }
-                    a{
-                        left: 5vw;
-                        top: 40vh;
-                        font-size: 5vw;
-                
-                    }
+                  }
                    
+                }
+                a{
+                 left: 10%;       
+                    font-size: 4vw;
                 }
                 
             }
@@ -741,7 +781,29 @@
 
          }
 
-
+         .aside{
+            height: 63vh;
+            form{
+                .form__item{
+                    width: 70%;
+                    .form__label{
+                        font-size: 3.4vw;
+                    }
+                    .form__input{
+                        font-size: 3vw;
+                    }
+                }
+                .form__item:last-child{
+                    width: 100%;
+                  .checkbox{
+                    .checkbox__input{
+                        width: 15px;
+                        height: 15px;
+                    }
+                  }
+                }
+            }
+         }
          footer{
             position: relative;
             width: 100vw;
@@ -803,16 +865,6 @@
 @mixin view380{
     @media (max-width: 390px) {
 
-      .content{
-        .aboutUs__container{
-            .aboutUs__content{
-                height: 50vh;
-                a{
-                    top: 39vh;
-                }
-            }
-        }
-      }
       header{
         .header__wrapper{
             .language{
@@ -821,7 +873,11 @@
             }
             .header__menu{
                 height: 5vh;
+                .header__burger{
+                    bottom: 1.2vh;
+                }
             }
+        
         }
       }
        
@@ -833,12 +889,25 @@
     @media (max-width: 330px) {
 
         .content{
+            width: 100vw;
             .aboutUs__container{
-                .aboutUs__content{
-                    height: 53vh;
-                }
+               height: 55vh;
+                .aboutUs__imgContent{
+                    p{
+                        width: 45%;
+                    }
+               }
             }
           }
+
+
+        .map__container{
+            h2{
+                width: 100%;
+                text-align: center;
+            }
+        }
+
         header{
             .header__wrapper{
                 .language{
@@ -848,6 +917,24 @@
                     height: 6vh;
                 }
             }
-          }      
+          }  
+          
+        .aside{
+            height: 80vh;
+        }
+        footer{
+            height: 30vh;
+            .Contacts{
+                h2{
+                    font-size: 5vw;
+                }
+                p{
+                    font-size: 3vw;
+                }
+            }
+           h2{
+            font-size: 5vw;
+           }
+        }
     }
 }

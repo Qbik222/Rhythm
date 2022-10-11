@@ -358,7 +358,7 @@ header{
 
 
 
-.modal::after{
+.aside::after{
     content: "";
     position: absolute;
     top: 0;
@@ -370,23 +370,23 @@ header{
     visibility: hidden;
     transition: all 0.5s ease 0s;
 }
-.modal._sending::after{
+.aside._sending::after{
     opacity: 1;
     visibility: visible;
 }
 
-.modal{
+.aside{
     display: flex;
     position: fixed;
     flex-direction: column;
     justify-content: center;
-    padding-top: 45vh;
+    padding-top: 44vh;
     padding-left: 1vw;
     top: 0;
     width: 33.4vw;
     height: 100vh;
     background: url("../img/asideBG.jpg") no-repeat ;
-    background-size: 130%;
+    background-size: 135%;
     font-size: 1vw;
     z-index: -1;
     opacity: 0;
@@ -515,6 +515,7 @@ header{
                     bottom: 2%;
                     left: 40%;
                  }
+             
               
             }   
         }
@@ -525,10 +526,11 @@ header{
             }
 
 }
-.modal__active{
+.aside__active{
     opacity: 1;
     z-index: 4 !important;
     left: 66.7%;
+   
 }
 .display__mode{
    
@@ -541,54 +543,74 @@ header{
 
 }
 .aboutUs__container{
+         height: 70vh;
     h2{
-        position: relative;
-        top: 10vh;
-        left: 13vw;
+        text-align: center;
         font-size: $fontSizeHeaderContent;
         width: 50%;
-    }
-}
-.aboutUs__content{
-    display: flex;
-    position: relative;
-    width: 60vw;
-    height: 65vh;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
 
-    #imgRightAbout{
-        display: none;
-        position: absolute;
-        right: 2vw;
-        top: 2vh;
-        max-width: 26vw;
-        max-height: 46vh ;
     }
-    #imgLeftAbout{
+
+    .aboutUs__content{
+        display: flex;
         position: relative;
-        left: 10vh;
-        top: 13vh;
-        max-width: 26vw;
-        max-height: 46vh ;
+        flex-direction: column;
+        width: 60vw;
+        height: 75%;
+        flex-direction: row;
+    
+        // #imgRightAbout{
+        //     display: none;
+        //     position: absolute;
+        //     right: 2vw;
+        //     top: 2vh;
+        //     max-width: 26vw;
+        //     max-height: 46vh ;
+        // }
+
+        .aboutUs__imgContent{
+            position: relative;
+            display: flex;
+            width: 100%;
+            height: 95%;
+            justify-content: space-around;
+            top: 0;
+            left: 0;
+            #imgLeftAbout{
+                position: relative;
+                left: 0;
+                top: 0;
+                max-width: 50%;
+                max-height: 100% ;
+            }
+            p{
+                position: relative;
+                font-size: $fontSizeTextContent;
+                width: 45%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                line-height: 2.1vw;
+           
+         
+            }
+        
+        }
+
+       
     }
-    p{
-        position: relative;
-        font-size: $fontSizeTextContent;
-        width: 45%;
-        left: 7vw;
-        top: 15vh;
-        line-height: 2.1vw;
- 
-    }
+
     a{
-        position: absolute;
-        left: 10vw;
-        bottom: 0vh;
+        position: relative;
+        left: 15%;
         font-size: $fontSizeTextContent;
 
     }
 
-   
 }
+
 
 
 
@@ -734,11 +756,12 @@ footer{
 }
 
 @include view1600;
-@include view1366;
+
+
 @include view1440;
 @include view1024;
 @include view867;
-@include view776;
-@include view450;
+// @include view776;
+@include view485;
 @include view380;
 @include view330;
