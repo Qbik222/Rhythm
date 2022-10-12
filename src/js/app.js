@@ -11,21 +11,35 @@ import changeLanguage from "./modules/changeLng.js";
 import mapApi from "./modules/mapsApi.js";
 import * as flsFunctions from "./modules/functions.js";
 
+
 document.addEventListener("DOMContentLoaded", () =>{
 
     const content = document.querySelector(".content");
+    const title = document.title;
+    const sliderItem = document.querySelector(".slider__item")
 
 
-    flsFunctions.isWebp();
-    slider();
-    menuBurger();
-    asideShow(content);
-    stickSlider();
-    hideLogo(content);
-    mapApi();
-    formValidate();
-    changeLanguage(langArr);
 
+    if(title == "Rhythm"){
+        flsFunctions.isWebp();
+        slider();
+        menuBurger();
+        asideShow(content);
+        stickSlider();
+        hideLogo(content, sliderItem);
+        mapApi();
+        formValidate();
+        changeLanguage(langArr);
+    
+    }else{
+        flsFunctions.isWebp();
+        menuBurger();
+        asideShow(content);
+        hideLogo(content);
+        formValidate();
+        changeLanguage(langArr);
+    }
 
+    
 })
 

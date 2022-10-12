@@ -1,13 +1,19 @@
-function hideLogo(content){
+function hideLogo(content, slider){
     const logo = document.querySelector(".logo")
-    const slider = document.querySelector(".slider__item")
+    if (document.title !== "Rhythm" ){
+        slider = content;
+    }
 
 
     function hideLogoByScroll(){
-        let contentPosition = content.getBoundingClientRect().y;
         let sliderPosition = slider.getBoundingClientRect().y;
         let logoHeight = logo.getBoundingClientRect().height;
-        // console.log(contentPosition - logoHeight)
+
+
+
+
+
+
         if (sliderPosition <= logoHeight ){
             logo.classList.add("logoHide")  
             
@@ -16,9 +22,7 @@ function hideLogo(content){
             logo.classList.remove("logoHide")  
             
         }
-        if(contentPosition < logoHeight){
-            logo.classList.add("logoHide")  
-        }
+     
     }
 
     window.addEventListener("scroll", hideLogoByScroll)

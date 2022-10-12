@@ -21,8 +21,8 @@ const langArr = {
         "en": "Timetable"
     },
     "contests":{
-        "ua": "Конкурси",
-        "en": "Сontests"
+        "ua": "Творча діяльність",
+        "en": "Creative activity"
     },
     "aboutUs__text":{
         "ua": `«Rhythm dance school» - школа сучасного та класичного танцю
