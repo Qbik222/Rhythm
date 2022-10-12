@@ -548,8 +548,12 @@ header{
 
 }
 .aboutUs__container{
-         height: 70vh;
-    h2{
+         height: 120vh;
+         display: flex;
+         flex-direction: column;
+
+
+         h2{
         text-align: center;
         font-size: $fontSizeHeaderContent;
         width: 50%;
@@ -563,7 +567,7 @@ header{
         position: relative;
         flex-direction: column;
         width: 60vw;
-        height: 75%;
+        height: 39.5%;
         flex-direction: row;
     
         // #imgRightAbout{
@@ -606,12 +610,41 @@ header{
 
        
     }
+    .aboutUs__teacher{
+        display: flex;
+        
+        justify-content: space-around;
+        height: 50.5%;
+        margin-top: 5vh;
+        img{
+            
+            width: 40%;
+            max-height: 100%;
+            margin-left: 1.7%;
+        }
+        .aboutUs__teacher-content{
+            width: 50%;
+        
+            h3{
+                font-size: $fontSizeHeaderContent;
+            }
+            p{
+                font-size: $fontSizeTextContent;
+            }
+        }
+   
+    }
 
     a{
         position: relative;
-        left: 15%;
-        font-size: $fontSizeTextContent;
+        left: 5%;
+        font-size: 3.5vh;
+        width: 40vh;
 
+    }
+    a:hover{
+        bottom: 2px;
+        text-shadow: 0 0 20px black;
     }
 
 }

@@ -620,7 +620,9 @@ header .language {
 }
 
 .aboutUs__container {
-  height: 70vh;
+  height: 120vh;
+  display: flex;
+  flex-direction: column;
 }
 .aboutUs__container h2 {
   text-align: center;
@@ -634,7 +636,7 @@ header .language {
   position: relative;
   flex-direction: column;
   width: 60vw;
-  height: 75%;
+  height: 39.5%;
   flex-direction: row;
 }
 .aboutUs__container .aboutUs__content .aboutUs__imgContent {
@@ -662,10 +664,35 @@ header .language {
   top: 0;
   line-height: 2.1vw;
 }
+.aboutUs__container .aboutUs__teacher {
+  display: flex;
+  justify-content: space-around;
+  height: 50.5%;
+  margin-top: 5vh;
+}
+.aboutUs__container .aboutUs__teacher img {
+  width: 40%;
+  max-height: 100%;
+  margin-left: 1.7%;
+}
+.aboutUs__container .aboutUs__teacher .aboutUs__teacher-content {
+  width: 50%;
+}
+.aboutUs__container .aboutUs__teacher .aboutUs__teacher-content h3 {
+  font-size: 2.2vw;
+}
+.aboutUs__container .aboutUs__teacher .aboutUs__teacher-content p {
+  font-size: 1.3vw;
+}
 .aboutUs__container a {
   position: relative;
-  left: 15%;
-  font-size: 1.3vw;
+  left: 5%;
+  font-size: 3.5vh;
+  width: 40vh;
+}
+.aboutUs__container a:hover {
+  bottom: 2px;
+  text-shadow: 0 0 20px black;
 }
 
 .map__container {
@@ -842,6 +869,10 @@ footer .social__Media .socialMedia-Tiktok:hover {
     height: 90%;
   }
 }
+.aboutUs__container {
+  height: 135vh;
+}
+
 @media (max-width: 1440px) {
   .aside {
     background: url("../img/asideBG900px.jpg") no-repeat;
@@ -887,42 +918,42 @@ footer .social__Media .socialMedia-Tiktok:hover {
     right: 1vw;
     width: 3vw;
   }
-  header .header__wrapper .header__menu-panel {
+  .header__menu-panel {
     width: 100%;
     height: 50vh;
     z-index: 3;
     background: rgba(129, 128, 128, 0.7);
   }
-  header .header__wrapper .header__menu-panel .social__Media {
+  .header__menu-panel .social__Media {
     gap: 5.6vw;
     margin-top: 0%;
     padding-top: 1%;
     padding-left: 30%;
   }
-  header .header__wrapper .header__menu-panel .social__Media .socialMedia-Instagram {
+  .header__menu-panel .social__Media .socialMedia-Instagram {
     width: 4.77vw;
     height: 7.77vh;
   }
-  header .header__wrapper .header__menu-panel .social__Media .socialMedia-Telegram {
+  .header__menu-panel .social__Media .socialMedia-Telegram {
     width: 4.77vw;
     height: 7.77vh;
   }
-  header .header__wrapper .header__menu-panel .social__Media .socialMedia-Facebook {
+  .header__menu-panel .social__Media .socialMedia-Facebook {
     width: 4.77vw;
     height: 7.77vh;
   }
-  header .header__wrapper .header__menu-panel .social__Media .socialMedia-Tiktok {
+  .header__menu-panel .social__Media .socialMedia-Tiktok {
     width: 4.77vw;
     height: 7.77vh;
   }
-  header .header__wrapper .header__menu-panel ul {
+  .header__menu-panel ul {
     margin-top: 5vh;
   }
-  header .header__wrapper .header__menu-panel li {
+  .header__menu-panel li {
     font-size: 3vw;
     height: 7vh;
   }
-  header .header__wrapper .menu__open {
+  .menu__open {
     bottom: 50vh;
   }
   .spacer {
@@ -942,7 +973,7 @@ footer .social__Media .socialMedia-Tiktok:hover {
   }
   .content .aboutUs__container {
     width: 100%;
-    height: 70vh;
+    height: 120vh;
   }
   .content .aboutUs__container h2 {
     font-size: 4.5vw;
@@ -981,6 +1012,7 @@ footer .social__Media .socialMedia-Tiktok:hover {
     z-index: 4;
     padding: 0;
     width: 100vw;
+    background: #d187aa;
     height: 100vh;
   }
   .aside form {
@@ -1028,6 +1060,7 @@ footer .social__Media .socialMedia-Tiktok:hover {
   footer {
     width: 100vw;
     right: 0%;
+    top: 0;
   }
   footer h2 {
     font-size: 4.5vw;
@@ -1126,7 +1159,7 @@ footer .social__Media .socialMedia-Tiktok:hover {
   }
   .content .aboutUs__container {
     width: 100%;
-    height: 50vh;
+    height: 100vh;
   }
   .content .aboutUs__container h2 {
     font-size: 5vw;
@@ -1144,6 +1177,13 @@ footer .social__Media .socialMedia-Tiktok:hover {
     bottom: 0;
     font-size: 2.5vw;
   }
+  .content .aboutUs__container .aboutUs__teacher .aboutUs__teacher-content h3 {
+    font-size: 5vw;
+    margin-bottom: 2vh;
+  }
+  .content .aboutUs__container .aboutUs__teacher .aboutUs__teacher-content p {
+    font-size: 2.5vw;
+  }
   .content .map__container {
     margin-top: 2vh;
   }
@@ -1155,6 +1195,7 @@ footer .social__Media .socialMedia-Tiktok:hover {
   }
   .aside {
     height: 60vh;
+    background: #d187aa;
   }
   .aside form .form__title {
     font-size: 5vw;
@@ -1217,6 +1258,46 @@ footer .social__Media .socialMedia-Tiktok:hover {
   body.lock {
     overflow: hidden;
   }
+  .header__menu-panel {
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background: rgba(129, 128, 128, 0.7);
+  }
+  .header__menu-panel .social__Media {
+    gap: 16.6vw;
+    margin-top: 0%;
+    padding-top: 1%;
+    padding-left: 4%;
+    padding-right: 2%;
+  }
+  .header__menu-panel .social__Media .socialMedia-Instagram {
+    width: 10vw;
+    height: 10vh;
+  }
+  .header__menu-panel .social__Media .socialMedia-Telegram {
+    width: 10vw;
+    height: 10vh;
+  }
+  .header__menu-panel .social__Media .socialMedia-Facebook {
+    width: 10vw;
+    height: 10vh;
+  }
+  .header__menu-panel .social__Media .socialMedia-Tiktok {
+    width: 10vw;
+    height: 10vh;
+  }
+  .header__menu-panel ul {
+    margin-top: 10vh;
+  }
+  .header__menu-panel li {
+    font-size: 10vw;
+    height: 14vh;
+  }
+  .menu__open {
+    bottom: 0vh;
+    overflow: hidden;
+  }
   header .header__wrapper .logo {
     height: 10vh;
     width: 26vw;
@@ -1246,46 +1327,6 @@ footer .social__Media .socialMedia-Tiktok:hover {
     right: 2.4vw;
     width: 6vw;
   }
-  header .header__wrapper .header__menu-panel {
-    width: 100%;
-    height: 100%;
-    z-index: 3;
-    background: rgba(129, 128, 128, 0.7);
-  }
-  header .header__wrapper .header__menu-panel .social__Media {
-    gap: 16.6vw;
-    margin-top: 0%;
-    padding-top: 1%;
-    padding-left: 4%;
-    padding-right: 2%;
-  }
-  header .header__wrapper .header__menu-panel .social__Media .socialMedia-Instagram {
-    width: 10vw;
-    height: 10vh;
-  }
-  header .header__wrapper .header__menu-panel .social__Media .socialMedia-Telegram {
-    width: 10vw;
-    height: 10vh;
-  }
-  header .header__wrapper .header__menu-panel .social__Media .socialMedia-Facebook {
-    width: 10vw;
-    height: 10vh;
-  }
-  header .header__wrapper .header__menu-panel .social__Media .socialMedia-Tiktok {
-    width: 10vw;
-    height: 10vh;
-  }
-  header .header__wrapper .header__menu-panel ul {
-    margin-top: 10vh;
-  }
-  header .header__wrapper .header__menu-panel li {
-    font-size: 10vw;
-    height: 14vh;
-  }
-  header .header__wrapper .menu__open {
-    bottom: 0vh;
-    overflow: hidden;
-  }
   .content {
     width: 100vw;
     clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 70%, 100% 100%, 57% 100%, 18% 100%, 0 100%, 0% 35%, 0 0);
@@ -1296,7 +1337,7 @@ footer .social__Media .socialMedia-Tiktok:hover {
   }
   .content .aboutUs__container {
     width: 100%;
-    height: 45vh;
+    height: 85vh;
   }
   .content .aboutUs__container h2 {
     font-size: 8vw;
@@ -1312,6 +1353,12 @@ footer .social__Media .socialMedia-Tiktok:hover {
   .content .aboutUs__container a {
     left: 10%;
     font-size: 4vw;
+  }
+  .content .aboutUs__container .aboutUs__teacher .aboutUs__teacher-content h3 {
+    font-size: 8vw;
+  }
+  .content .aboutUs__container .aboutUs__teacher .aboutUs__teacher-content p {
+    font-size: 3vw;
   }
   .content .map__container {
     margin-top: 2vh;
@@ -1400,7 +1447,7 @@ footer .social__Media .socialMedia-Tiktok:hover {
     width: 100vw;
   }
   .content .aboutUs__container {
-    height: 55vh;
+    height: 100vh;
   }
   .content .aboutUs__container .aboutUs__imgContent p {
     width: 45%;
