@@ -1,0 +1,183 @@
+.dancers{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dancers__container {
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50%;
+    width: 100vw;
+    margin-top: 4%;
+    padding: 3%;
+    h1{
+        width: 100%;
+        font-size: 6vw;
+        margin-bottom: 3vh;
+    }
+    img{
+        position: absolute;
+        width: 35%;
+        height: 73vh;
+        right: 5vw;
+        top: 14vh;
+    }
+    .dancers__header {
+     
+        text-align: left;
+        width: 100%;
+        h2{
+            width: 50%;
+            font-size: 3vw;
+            margin-top: 2vh;
+            margin-bottom: 4vh;  
+        }
+        h3{
+            font-size: 2.5vw;
+            width: 60%;
+        }
+    }
+    
+    .dancers__teams {
+        display: flex;
+        justify-content: space-around;
+        width: 100vw;
+        padding: 1%;
+        margin-top: 5vh;
+
+
+        .adult {
+            height:100%;   
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            width: 30%;
+            h3{
+                width: 100%;
+                text-align: right;
+                font-size: 2vw;
+                border-bottom: 10px solid #d187aa;
+                
+            }
+            li{
+                font-size: 1.5vw;
+                margin-top: 2vh;
+                border-bottom: 2px solid #d187aa;
+                width: 100%;
+                padding-bottom: 0.4%;
+            }
+        }
+        .younger {
+          
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 30%;
+            h3{
+                width: 100%;
+                text-align: right;
+                font-size: 2vw;
+                border-bottom: 10px solid #d187aa;
+                
+            }
+            li{
+                font-size: 1.5vw;
+                margin-top: 2vh;
+                border-bottom: 2px solid #d187aa;
+                width: 100%;
+                padding-bottom: 0.4%;
+            }
+        }
+    }
+}
+
+.dancers__footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    background: rgb(196, 153, 196);
+    z-index: 4;
+    h2{
+        font-size: $fontSizeHeaderContent;
+        margin-top: 1vw;
+    }
+    .Contacts{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       
+        h2{
+            font-size: $fontSizeHeaderContent;
+        }
+        .contacts__info{
+            display: flex;
+            margin-top: 1.85vh;
+            gap: 3.66vw;
+            p{
+                font-size: $fontSizeTextContent;
+            }
+        }
+     
+    }
+    .social__Media{
+        display: flex;
+        gap: 4.1vw;
+        margin: 1.8vh;
+        .socialMedia-Instagram{
+            width: 2.5vw;
+            height: 5vh;
+       
+       
+        }
+        .socialMedia-Instagram:hover{
+            position: relative;
+            bottom: 5px;
+            right: 1px;
+            fill: red;
+        }
+        .socialMedia-Telegram{
+            width: 2.5vw;
+            height: 5vh;
+       
+        }
+        .socialMedia-Telegram:hover{
+            position: relative;
+            bottom: 5px;
+            right: 1px;
+            fill: rgb(0, 110, 255);
+           
+        }
+        .socialMedia-Facebook{
+            cursor: pointer;
+            width: 2.5vw;
+            height: 5vh;
+       
+        }
+        .socialMedia-Facebook:hover{
+            position: relative;
+            bottom: 5px;
+            right: 1px;
+            fill: rgb(43, 0, 201);
+           
+        }
+        .socialMedia-Tiktok{
+            width: 2.5vw;
+            height: 5vh;
+       
+        }
+        .socialMedia-Tiktok:hover{
+            position: relative;
+            bottom: 5px;
+            right: 1px;
+            fill: purple;
+           
+        }
+
+    }
+}

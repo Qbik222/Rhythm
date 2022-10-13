@@ -6,6 +6,9 @@ function hideLogo(content, slider){
     if (document.title !== "Rhythm"){
         slider = content;
     }
+    if(document.title == "Our Dancers"){
+        slider = document.querySelector(".dancers__container")
+    }
 
     function hideLogoByScroll(){
         let sliderPosition = slider.getBoundingClientRect().y;

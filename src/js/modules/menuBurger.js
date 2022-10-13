@@ -13,6 +13,7 @@ function menuBurger(){
             document.querySelector(".open").classList.toggle("btn__active");
             document.querySelector(".close").classList.toggle("btn__active");
             document.querySelector("body").classList.toggle("lock");
+         
 
         });
     })

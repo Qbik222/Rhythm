@@ -99,6 +99,54 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
+.promo {
+  display: none;
+  position: absolute;
+  top: -20vh;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  z-index: 1;
+  z-index: 0;
+}
+.promo img {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.promo h1 {
+  position: relative;
+  bottom: 60%;
+  color: white;
+  text-shadow: 10px 0 10px black;
+  z-index: 2;
+  font-family: BarlowBold;
+  font-size: 7vw;
+  width: 100%;
+  text-align: center;
+  padding: 2%;
+}
+.promo p {
+  position: relative;
+  bottom: 40%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  text-shadow: 10px 0 10px black;
+  font-size: 4vw;
+}
+
+@media (max-width: 1030px) {
+  .promo {
+    display: block;
+    opacity: 1;
+  }
+}
+@media (max-width: 868px) {
+  .promo {
+    display: none;
+  }
+}
 .readMore__container {
   width: 100%;
   height: 100vh;
@@ -154,6 +202,171 @@ h1, h2, h3, h4, h5, h6 {
   height: 90%;
 }
 
+.dancers {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dancers__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50%;
+  width: 100vw;
+  margin-top: 4%;
+  padding: 3%;
+}
+.dancers__container h1 {
+  width: 100%;
+  font-size: 6vw;
+  margin-bottom: 3vh;
+}
+.dancers__container img {
+  position: absolute;
+  width: 35%;
+  height: 73vh;
+  right: 5vw;
+  top: 14vh;
+}
+.dancers__container .dancers__header {
+  text-align: left;
+  width: 100%;
+}
+.dancers__container .dancers__header h2 {
+  width: 50%;
+  font-size: 3vw;
+  margin-top: 2vh;
+  margin-bottom: 4vh;
+}
+.dancers__container .dancers__header h3 {
+  font-size: 2.5vw;
+  width: 60%;
+}
+.dancers__container .dancers__teams {
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  padding: 1%;
+  margin-top: 5vh;
+}
+.dancers__container .dancers__teams .adult {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 30%;
+}
+.dancers__container .dancers__teams .adult h3 {
+  width: 100%;
+  text-align: right;
+  font-size: 2vw;
+  border-bottom: 10px solid #d187aa;
+}
+.dancers__container .dancers__teams .adult li {
+  font-size: 1.5vw;
+  margin-top: 2vh;
+  border-bottom: 2px solid #d187aa;
+  width: 100%;
+  padding-bottom: 0.4%;
+}
+.dancers__container .dancers__teams .younger {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 30%;
+}
+.dancers__container .dancers__teams .younger h3 {
+  width: 100%;
+  text-align: right;
+  font-size: 2vw;
+  border-bottom: 10px solid #d187aa;
+}
+.dancers__container .dancers__teams .younger li {
+  font-size: 1.5vw;
+  margin-top: 2vh;
+  border-bottom: 2px solid #d187aa;
+  width: 100%;
+  padding-bottom: 0.4%;
+}
+
+.dancers__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  background: rgb(196, 153, 196);
+  z-index: 4;
+}
+.dancers__footer h2 {
+  font-size: 2.2vw;
+  margin-top: 1vw;
+}
+.dancers__footer .Contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dancers__footer .Contacts h2 {
+  font-size: 2.2vw;
+}
+.dancers__footer .Contacts .contacts__info {
+  display: flex;
+  margin-top: 1.85vh;
+  gap: 3.66vw;
+}
+.dancers__footer .Contacts .contacts__info p {
+  font-size: 1.3vw;
+}
+.dancers__footer .social__Media {
+  display: flex;
+  gap: 4.1vw;
+  margin: 1.8vh;
+}
+.dancers__footer .social__Media .socialMedia-Instagram {
+  width: 2.5vw;
+  height: 5vh;
+}
+.dancers__footer .social__Media .socialMedia-Instagram:hover {
+  position: relative;
+  bottom: 5px;
+  right: 1px;
+  fill: red;
+}
+.dancers__footer .social__Media .socialMedia-Telegram {
+  width: 2.5vw;
+  height: 5vh;
+}
+.dancers__footer .social__Media .socialMedia-Telegram:hover {
+  position: relative;
+  bottom: 5px;
+  right: 1px;
+  fill: rgb(0, 110, 255);
+}
+.dancers__footer .social__Media .socialMedia-Facebook {
+  cursor: pointer;
+  width: 2.5vw;
+  height: 5vh;
+}
+.dancers__footer .social__Media .socialMedia-Facebook:hover {
+  position: relative;
+  bottom: 5px;
+  right: 1px;
+  fill: rgb(43, 0, 201);
+}
+.dancers__footer .social__Media .socialMedia-Tiktok {
+  width: 2.5vw;
+  height: 5vh;
+}
+.dancers__footer .social__Media .socialMedia-Tiktok:hover {
+  position: relative;
+  bottom: 5px;
+  right: 1px;
+  fill: purple;
+}
+
 body {
   background: #875f91;
   display: flex;
@@ -168,14 +381,16 @@ body h1, body h2, body h3, body h4 {
 }
 
 .header__menu-panel {
+  display: flex;
+  flex-direction: column;
   position: fixed;
   width: 33vw;
-  height: 50vh;
+  height: 100vh;
   right: 0;
-  bottom: 150vh;
+  bottom: 200vh;
   z-index: 4;
   transition: all 0.4s;
-  background: rgba(129, 128, 128, 0.5);
+  background: rgba(129, 128, 128, 0.8);
 }
 .header__menu-panel .social__Media {
   display: flex;
@@ -187,8 +402,8 @@ body h1, body h2, body h3, body h4 {
   padding-bottom: 0.9vh;
 }
 .header__menu-panel .social__Media .socialMedia-Instagram {
-  width: 1.57vw;
-  height: 2.77vh;
+  width: 2.27vw;
+  height: 4.27vh;
 }
 .header__menu-panel .social__Media .socialMedia-Instagram:hover {
   position: relative;
@@ -197,8 +412,8 @@ body h1, body h2, body h3, body h4 {
   fill: red;
 }
 .header__menu-panel .social__Media .socialMedia-Telegram {
-  width: 1.57vw;
-  height: 2.77vh;
+  width: 2.27vw;
+  height: 4.27vh;
 }
 .header__menu-panel .social__Media .socialMedia-Telegram:hover {
   position: relative;
@@ -208,8 +423,8 @@ body h1, body h2, body h3, body h4 {
 }
 .header__menu-panel .social__Media .socialMedia-Facebook {
   cursor: pointer;
-  width: 1.57vw;
-  height: 2.77vh;
+  width: 2.27vw;
+  height: 4.27vh;
 }
 .header__menu-panel .social__Media .socialMedia-Facebook:hover {
   position: relative;
@@ -218,8 +433,8 @@ body h1, body h2, body h3, body h4 {
   fill: rgb(43, 0, 201);
 }
 .header__menu-panel .social__Media .socialMedia-Tiktok {
-  width: 1.77vw;
-  height: 2.77vh;
+  width: 2.27vw;
+  height: 4.27vh;
 }
 .header__menu-panel .social__Media .socialMedia-Tiktok:hover {
   position: relative;
@@ -231,18 +446,19 @@ body h1, body h2, body h3, body h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
   gap: 1.8vh;
   margin-top: 10vh;
 }
 .header__menu-panel li {
   color: black;
   text-shadow: 0 0 10px white;
-  font-size: 2vw;
+  font-size: 3vw;
   text-align: center;
   margin-right: 1vw;
   gap: 1vw;
   width: 100%;
-  height: 6vh;
+  height: 10vh;
   transition: all 0.3s;
   cursor: pointer;
 }
@@ -255,7 +471,7 @@ body h1, body h2, body h3, body h4 {
 }
 
 .menu__open {
-  bottom: 50vh;
+  bottom: 0;
 }
 
 header {
@@ -880,6 +1096,9 @@ footer .social__Media .socialMedia-Tiktok:hover {
   }
 }
 @media (max-width: 1030px) {
+  body.lock {
+    overflow: hidden;
+  }
   header .header__wrapper .logo {
     height: 14vh;
     width: 13vw;
@@ -920,7 +1139,7 @@ footer .social__Media .socialMedia-Tiktok:hover {
   }
   .header__menu-panel {
     width: 100%;
-    height: 50vh;
+    height: 100vh;
     z-index: 3;
     background: rgba(129, 128, 128, 0.7);
   }
@@ -954,7 +1173,7 @@ footer .social__Media .socialMedia-Tiktok:hover {
     height: 7vh;
   }
   .menu__open {
-    bottom: 50vh;
+    bottom: 0vh;
   }
   .spacer {
     display: none;
@@ -1099,7 +1318,7 @@ footer .social__Media .socialMedia-Tiktok:hover {
 }
 @media (max-width: 867px) {
   body {
-    overflow-x: hidden !important;
+    overflow-x: hidden;
   }
   header .header__wrapper .logo {
     height: 7vh;
@@ -1107,20 +1326,20 @@ footer .social__Media .socialMedia-Tiktok:hover {
   }
   header .header__wrapper .language {
     width: 5.5vw;
-    height: 3vh;
+    height: 5vh;
     border: 1px solid #875f91;
     font-size: 2vw;
   }
   header .header__wrapper .header__menu {
     border: 1px solid #875f91;
     width: 8vw;
-    height: 3vh;
+    height: 5vh;
   }
   header .header__wrapper .header__menu .btn__active {
     display: none;
   }
   header .header__wrapper .header__menu .header__burger {
-    bottom: 0.7vh;
+    bottom: 1vh;
     width: 3vw;
   }
   header .header__wrapper .header__menu .header__burger::before {
@@ -1135,7 +1354,7 @@ footer .social__Media .socialMedia-Tiktok:hover {
     width: 4vw;
   }
   header .header__wrapper .header__menu .burger__open::after {
-    bottom: 0.4vh;
+    bottom: 0.6vh;
     right: 1.4vw;
     width: 4vw;
   }
@@ -1255,9 +1474,6 @@ footer .social__Media .socialMedia-Tiktok:hover {
   }
 }
 @media (max-width: 485px) {
-  body.lock {
-    overflow: hidden;
-  }
   .header__menu-panel {
     width: 100%;
     height: 100%;

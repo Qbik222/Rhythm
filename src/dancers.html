@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 @@include("html/head.html",{
-    "title": "Rhythm"
+    "title": "Our Dancers"
 })
 <body>
+   @@include("html/header.html" {})
+   @@include("html/menu__panels/dancers__menu-panel.html" {})
+   <main class="dancers"> 
     <svg display = "none">
         <symbol id="instagram" viewBox="0 0 512 512">
             <g>
@@ -70,133 +73,82 @@
         </symbol>
     
      </svg>
-   @@include("html/header.html" {})
-   @@include("html/menu__panels/header__menu-panel.html" {})
-
-  
-   <main class="wrapper"> 
-   
-        <div class="carousel__wrapper">
-            <div class="carousel__slider">
-               <div class="slider__item">
-                <p>
-                    Slide 1
-                </p>
-                <img src="./img/slide1.JPG"  alt="image 1">
-               </div>
-               <div class="slider__item">
-                <p>
-                    Slide 2
-                </p>
-                <p><a href="https://learn.javascript.ru/settimeout-setinterval">click</a></p>
-                <img src="./img/slide2.JPG" alt="image 1">
-                  
-               </div>
-               <div class="slider__item ">
-                <p>
-                    Slide 3
-                </p>
-              
-                <img src="./img/slide3.JPG"  alt="image 1">
-               </div>
-            </div>  
-        </div>
-      
-   
-    <div class="spacer">
-    </div>
-    <div class="content">
-        <div class="aboutUs__container" id="About">
-            <h2 class="aboutUs__headerText">About us</h2>
-            <div class="aboutUs__content">
-          
-                <div class="aboutUs__imgContent">
-                    <img src="./img/AboutLeftImg.jpg" alt="ads" id="imgLeftAbout">
-                    <p class="aboutUs__text">
-                 
-                        Rhythm is a modern and classical dance school for children. 
-                       The program of the school is built on the principle of a dance academy.
-                     </p>
-      
-                  
-                </div>
-        
-     
-               
-            </div>
-            <a href="about.html" class="readMore__btn"> Read more..</a>
-            <div class="aboutUs__teacher">
-                <img src="./img/teacherAbout.jpg" alt="#">
-                <div class="aboutUs__teacher-content">
-                    <h3>Mazhara Anna</h3>
-                    <p>
-                        Хореограф постановник , педагог , танцівниця, художній керівник школи Rhythm dance school
-                    </p>
-                </div>
-            </div>
-               
-        </div>
-        <div class="map__container" id="Location">
-            <h2 class="location__headerText">Location</h2>
-            <p class="location__street">Yevgena Sverstyuk 4A street</p>
-            <div id="map"></div>
-        </div>
-
-        <div class="timetable__container" id="Timetable">
-            <h2>Timetable</h2>
-            <div class="timetable__body">
-                <div class="timetable__item">
-                    <p>asdasdasd</p>
-                </div>
-                <div class="timetable__item">
-                    
-                </div>
-            </div>
-
-        </div>
-    </div>
- 
     
-    <div class="aside">
+     <div class="dancers__container">
+        <h1>Meet our dancers</h1>
+        <img src="./img/DancersRight.jpg" alt="#">
+        <div class="dancers__header">
+            <h2>Dance cannot exist without performers.
+                Each student
+                develops his skills, certain emotions
+                and feelings, dance becomes part of his life
+            </h2>
+            <h3>
+                On this page, you can learn about the wonderful 
+                dancers who are currently at the Rhythm dance school.
+            </h3>
+        </div>
+        <div class="dancers__teams">
+            
+            <ul class="adult">
+                <h3>Adult team</h3>
+                <li>Пчеліна Марія</li>
+                <li>Островська Соломія</li>
+                <li>Лясківська Катерина</li>
+                <li>Пчеліна Марія</li>
+                <li>Островська Соломія</li>
+                <li>Пчеліна Марія</li>
+                <li>Островська Соломія</li>
+                <li>Лясківська Катерина</li>
+                <li>Пчеліна Марія</li>
+                <li>Островська Соломія</li>
+            </ul>
+          
+            <ul class="younger">
+                <h3>Younger team</h3>
+                <li>Довгальова Крістіна</li>
+                <li>Довгальова Крістіна</li>
+                <li>Довгальова Крістіна</li>
+                <li>Довгальова Крістіна</li>
+            </ul>
+        </div>
      
-        <form action="submit" action="sendmail.php" method="post" >
-            <h2 class="form__title">Sign Up for a trial training session</h2>
-            <div class="form__item">
-                <label for="formName" class="form__label form__name">Your name*:</label>
-                <input id="formName" type="text" name="name" class="form__input _req">
+    
+     </div>
+     <div class="dancers__footer">
+        <div class="Contacts">
+            <h2 class="contactUs">Contact Us</h2>
+            <div class="contacts__info">
+                <p>Mail: Example@gmail.com</p>
+                <p>Number: +380990000000</p>
             </div>
-            <div class="form__item">
-                <label for="formChildName" class="form__label form__childName">Child name*:</label>
-                <input id="formChildName" type="text" name="childName" class="form__input _req">
-            </div>
-            <div class="form__item">
-                <label for="formNumber" class="form__label form__number ">Your phone number*:</label>
-                <input id="formNumber" type="number" class="form__input _req" name="number" placeholder="+380">
-            </div>
-            <div class="form__item">
-                <label for="formAbout" class="form__label form__about">A little about you</label>   
-             
-                <textarea id="formAbout" name="aboutYou" class="about" rows="5" cols="50"></textarea>
-            </div>
-            <div class="form__item">
-               <div class="checkbox">
-                    <input  id="formAgreement" type="checkbox" name="agreement" class="checkbox__input _req">
-                    <label for="formAgreement" class="form__label"><span class="form__agreement"> I give my consent to the processing of personal data</span></label>
-               </div>
-               <button type="submit" class="form__button">Send</button>
-            </div>
-            
            
-            
-           
-        </form>
-    </div>
+        </div>
+     
+        <h2 class="followUs">Follow Us</h2>
+        <div class="social__Media">
+            <a href="https://instagram.com/_rhythm_a?igshid=YmMyMTA2M2Y=" target="_blank"><svg class="socialMedia-Instagram">
+                <use xlink:href="#instagram">
+                </use>
+            </svg></a>
+            <a href="https://t.me/rhythm_A_2022" target="_blank"> <svg class="socialMedia-Telegram">
+                <use xlink:href="#telegram">
+                </use>
+            </svg></a>
+            <svg class="socialMedia-Facebook">
+                <use xlink:href="#facebook">
+                </use>
+            </svg>
+    
+            <a href="https://www.tiktok.com/@_rhythm_a?_t=8V1fcrlv35y" target="_blank"><svg class="socialMedia-Tiktok">
+               <use xlink:href="#TikTok">
+                </use>
+            </svg></a>
+    
+        </div>
+     </div>
    
-   </main>
 
-   @@include("html/footer.html"{})
-   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyBEa_VjuoD1wSLzIjovoK3RQr5522bog"></script>
-  <script src="js/app.min.js"></script>
-  
+   <script src="js/app.min.js"></script>
 </body>
 </html>
