@@ -22,7 +22,7 @@ const langArr = {
     },
     "contests":{
         "ua": "Творча діяльність",
-        "en": "Creative activity"
+        "en": "Creative activity.с"
     },
     "aboutUs__text":{
         "ua": `«Rhythm dance school» - школа сучасного та класичного танцю
